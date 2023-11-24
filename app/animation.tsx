@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 const tlLoader = gsap.timeline();
-const laptopScreen = window.matchMedia("(min-width: 992px)");
+// const laptopScreen = window.matchMedia("(min-width: 992px)");
 
 export default function animation() {
   tlLoader
