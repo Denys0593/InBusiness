@@ -64,7 +64,7 @@ export default function Home() {
 
       <section className="approach">
         <div className="approach__left">
-          <img src="/imgg.jpg" alt="city" />
+          <img src="/first_img.png" alt="city" />
         </div>
         <div className="approach__right">
           <div className="title approach__right_top">
