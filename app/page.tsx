@@ -1,113 +1,272 @@
-import Image from 'next/image'
+"use client";
+import Link from "next/link";
+
+import Hamburger from "./components/hamburger/hamburger";
+import firstImg from "../public/first_img.png";
+import "./styles.scss";
+import { useEffect } from "react";
+import animation from "./animation";
 
 export default function Home() {
+  useEffect(() => {
+    animation();
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <div className="loader">
+        <div className="loader__hello">
+          <img src="topBlack.png" alt="logo" />
+        </div>
+        <div className="loader__item"></div>
+        <div className="loader__item"></div>
+        <div className="loader__item"></div>
+      </div>
+      <header id="header">
+        <Link className="link" href="/">
+          <img src="/Logo.png" alt="" />
+        </Link>
+        <div className="divider"></div>
+        <Hamburger />
+      </header>
+
+      <section className="about">
+        <div className="about__frame">
+          <div className="about__home">
+            Home &gt;
+            <span> About Us</span>
+          </div>
+          <h1 className="about__title">About Us</h1>
+          <div className="line header__line" />
+        </div>
+      </section>
+
+      <section className="whoWeAre">
+        <div className="title whoWeAre__left">
+          <div className="line small" />
+          <div className="whoWeAre__title">Who we are</div>
+        </div>
+        <div className="whoWeAre__right">
+          <p className="whoWeAre__top">
+            InBusiness Advisory DMCC, a leading management consultancy firm, is
+            streamlined to provide entrepreneurs with a one-stop destination to
+            fulfil their corporate needs.{" "}
+          </p>
+          <p className="whoWeAre__bottom">
+            Here at InBusiness Advisory DMCC, we are professional corporate
+            services providers supporting individual entrepreneurs, cross-border
+            corporations and small and medium-sized enterprises in going global
+            by setting up a company in the United Arab Emirates (UAE) or other
+            jurisdictions.
+          </p>
+        </div>
+      </section>
+
+      <section className="approach">
+        <div className="approach__left">
+          <img src="/imgg.jpg" alt="city" />
+        </div>
+        <div className="approach__right">
+          <div className="title approach__right_top">
+            <div className="line small" />
+            <div className="approach__title">How we approach</div>
+          </div>
+          <p className="approach__descr">
+            As our dictums are at the highest level of confidentiality,
+            reliability and professionalism, we strive to shape our
+            administrative services specifically around client requirements.
+            This can range from assistance in choosing the most befitting
+            jurisdiction to the development of a specific commercial strategy
+            before going global.
+          </p>
+        </div>
+      </section>
+
+      <div className="someText">
+        Informed by the combined commercial, financial and legal backgrounds of
+        our executives and staff, we aim to understand your business and its
+        objectives.
+      </div>
+
+      <section className="inAddition">
+        <div className="inAddition__left">
+          <img src="second_img.png" alt="city" />
+        </div>
+        <div className="inAddition__right">
+          <div className="title inAddition__right_top">
+            <div className="line small" />
+            <div className="inAddition__title">In addition</div>
+          </div>
+          <p className="inAddition__descr">
+            In our opinion, the starting point of all our client relationships
+            is gaining a deep understanding and insight into their business, its
+            core issues and their priorities before performing the corporate
+            structuring and administration.
+            <br />
+            <br />
+            <span>
+              This, combined with respect, trust and integrity, enables us to
+              identify opportunities for our clients in order to increase their
+              revenue, reduce costs and improve margins and operating
+              efficiencies.
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section className="values">
+        {/* <div className="values_title">Our values</div> */}
+        <div className="values_title">
+          <span data-go="go">O</span>
+          <span data-go="go">u</span>
+          <span data-go="go">r&nbsp;</span>
+          <span data-go="go">v</span>
+          <span data-go="go">a</span>
+          <span data-go="go">l</span>
+          <span data-go="go">u</span>
+          <span data-go="go">e</span>
+          <span data-go="go">s</span>
+        </div>
+        <div className="values__wrapper">
+          <div className="values__top">
+            <div className="values__item">
+              <div className="values__title">Solutions driven</div>
+              <div className="values__descr">
+                We look for approaches that may not be obvious to find original
+                solutions. We try to deeply understand the task and think ahead
+                for you.
+              </div>
+              <img
+                src="placeholder.png"
+                alt="placeholder"
+                className="values__image"
+              />
+            </div>
+            <div className="values__item">
+              <div className="values__title">Competency</div>
+              <div className="values__descr">
+                We take ownership of tasks, at the same time looking for
+                continual improvement. We believe that you cannot properly
+                represent a client without understanding their business.
+              </div>
+              <img
+                src="placeholder.png"
+                alt="placeholder"
+                className="values__image"
+              />
+            </div>
+            <div className="values__item">
+              <div className="values__title">Confidentiality</div>
+              <div className="values__descr">
+                Our main value is to keep all information confidential.
+              </div>
+              <img
+                src="placeholder.png"
+                alt="placeholder"
+                className="values__image"
+              />
+            </div>
+          </div>
+          <div className="values__bottom">
+            <div className="values__item">
+              <div className="values__title">Honesty</div>
+              <div className="values__descr">
+                Behaving with deep levels of honesty is fundamental to who we
+                are.
+              </div>
+              <img
+                src="placeholder.png"
+                alt="placeholder"
+                className="values__image"
+              />
+            </div>
+            <div className="values__item">
+              <div className="values__title">Partnership oriented</div>
+              <div className="values__descr">
+                Our philosophy has always been to have fewer clients and to
+                focus on strong, long-term business relationships.{" "}
+              </div>
+              <img
+                src="placeholder.png"
+                alt="placeholder"
+                className="values__image"
+              />
+            </div>
+            <div className="values__item">
+              <div className="values__title">Attention</div>
+              <div className="values__descr">
+                Our main value is to keep all information confidential.
+              </div>
+              <img
+                src="placeholder.png"
+                alt="placeholder"
+                className="values__image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="beforeFooter">
+        <div className="beforeFooter__background">
+          <div data-shot="her">If you are an individual entrepreneur or an</div>
+          <div data-shot="him">
+            international business in need of professional
+          </div>
+          <div data-shot="her">
+            corporate services with linkage to local expertise,
+          </div>
+          <div data-shot="him">
+            please do not hesitate to contact us for more
+          </div>
+          <div data-shot="her">information on how we can assist you.</div>
+        </div>
+        <div className="beforeFooter__bottom">
+          <div className="beforeFooter__left">
+            Let’s make something remarkable, together.
+          </div>
+          <button className="beforeFooter__right">Contact Us</button>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <footer>
+        <div className="header">
+          <Link href="/" className="header__image">
+            <img src="topBlack.png" alt="logo" />
+          </Link>
+          <div>
+            <div className="header__middleLeft">
+              <span>Contacts:</span>
+              <br />
+              admin@in-business.com
+              <br />
+              +971 44  56 0771
+            </div>
+          </div>
+          <div>
+            <div className="header__middleRight">
+              <span>Address</span>
+              <br />
+              InBusiness Advisory DMCC
+              <br /> Po Box 338425
+              <br /> 3910, Platinum Tower, JLT, Dubai, UAE
+            </div>
+          </div>
+          <Link href="#header" className="header__end">
+            <img src="topbtn.png" alt="topbtn" />
+          </Link>
+        </div>
+        <Link className="linkedin" href="#">
+          LinkedIn
+        </Link>
+        <div className="bottom">
+          <div className="bottom__left">2022. InBusiness Advisory DMCC</div>
+          <div className="bottom__right">
+            <Link href="#">Terms and Conditions</Link>
+            <Link href="#">Privacy Policy</Link>
+          </div>
+        </div>
+      </footer>
     </main>
-  )
+  );
 }

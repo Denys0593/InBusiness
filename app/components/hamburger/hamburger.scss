@@ -1,0 +1,10 @@
+.hamburger {
+  width: 44px;
+  height: 13px;
+  //   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  cursor: pointer;
+}

@@ -1,0 +1,385 @@
+header {
+  height: 90px;
+  background: #080708;
+  padding: 25px 87px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.link {
+  display: block;
+  max-width: 196.596px;
+  height: 40px;
+}
+
+.line {
+  width: 64px;
+  height: 4px;
+  margin-top: 24px;
+  background-color: #9ce861;
+  &.small {
+    width: 32px;
+    margin-top: 0;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divider {
+  position: absolute;
+  width: 1px;
+  height: 90px;
+  opacity: 0.5;
+  background: #ccc;
+  right: 218px;
+  top: -16px;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  &__hello {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    z-index: 6;
+    color: #3b5d50;
+    opacity: 0;
+  }
+  &__item {
+    flex: 1 1 auto;
+    z-index: 7;
+    background: #3b5d50;
+    border-right: 1px solid #323232;
+    margin-top: 100%;
+  }
+  &:nth-child(2) {
+    border-right: none;
+  }
+}
+
+.about {
+  padding: 324px 0 0 87px;
+  min-height: 600px;
+  background: url("../public/first_background.png") center center/cover
+    no-repeat;
+  &__frame {
+    width: 344px;
+    height: 170px;
+  }
+  &__home {
+    color: #fff;
+    font-family: Faktum Test;
+    font-size: 18px;
+    span {
+      color: var(--Grey-2-lines, #ccc);
+      font-family: Faktum Test;
+      font-size: 18px;
+      line-height: 100%;
+    }
+  }
+  &__title {
+    color: #fff;
+    font-family: Faktum Test;
+    font-size: 80px;
+    margin-top: 48px;
+    line-height: 1;
+  }
+}
+
+.whoWeAre {
+  padding: 170px 238px 170px 87px;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 180px;
+    height: 29px;
+  }
+  &__title {
+    color: #080708;
+    font-family: Faktum Test;
+    font-size: 24px;
+    width: 132px;
+  }
+  &__right {
+    width: 1150px;
+    min-height: 436px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__top {
+    color: #000;
+    font-family: Faktum Test;
+    font-size: 48px;
+    line-height: 114%;
+  }
+  &__bottom {
+    color: var(--080708, #080708);
+    font-family: Mukta;
+    font-size: 32px;
+
+    line-height: 140%;
+    letter-spacing: -0.32px;
+  }
+}
+
+.approach,
+.inAddition {
+  height: 780px;
+  display: grid;
+  grid-template-columns: minmax(797px, auto) minmax(1123px, auto);
+  &__left img {
+    height: 100%;
+  }
+  &__right {
+    padding: 195px 235px 195px 178px;
+    background: #080708;
+    &_top {
+      width: 249px;
+    }
+  }
+  &__title {
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  &__descr {
+    margin-top: 48px;
+    color: #8a9093;
+    font-family: Mukta;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+}
+
+.someText {
+  margin: 140px auto;
+  width: 1154px;
+  color: #000;
+  text-align: center;
+  font-family: Faktum Test;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.inAddition {
+  height: 787px;
+  &__right {
+    background: #ebebeb;
+    padding: 130px 235px 130px 178px;
+    &_top {
+      width: 168px;
+    }
+  }
+  &__title {
+    color: #080708;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  &__descr {
+    color: #000;
+    font-family: Mukta;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    span {
+      color: #000;
+      font-family: Mukta;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+  }
+}
+
+.values {
+  padding: 110px 87px 100px 87px;
+  &_title {
+    color: #080708;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 400;
+    span {
+      display: inline-block;
+    }
+  }
+  &__wrapper {
+    margin-top: 56px;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(523px, auto));
+  }
+  &__item {
+    padding: 48px 58px 48px 48px;
+    display: grid;
+    grid-template-rows: minmax(43px, auto) minmax(124px, auto) minmax(
+        208px,
+        auto
+      );
+    border-left: 1px solid #d3d3d3;
+    &:nth-child(1) {
+      border-left: none;
+    }
+  }
+  &__top,
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 582px);
+  }
+  &__title {
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+  }
+  &__descr {
+    color: #080708;
+    font-family: Mukta;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 20px;
+  }
+  &__image {
+    margin-top: 32px;
+  }
+  &__top {
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+  }
+  &__bottom {
+    border-bottom: 1px solid #d3d3d3;
+  }
+}
+
+.beforeFooter {
+  height: 876px;
+  &__background {
+    background: url("../public/second_backgroung.png") lightgray 50% / cover
+      no-repeat;
+    padding: 153px 383px;
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  &__bottom {
+    padding: 100px 302px 99px 235px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__left {
+    width: 710px;
+    color: #080708;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 110%;
+  }
+  &__right {
+    color: #080708;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 140%;
+    position: relative;
+    &:before {
+      content: "";
+      width: 1px;
+      height: 280px;
+      background: #d3d3d3;
+      position: absolute;
+      top: -100px;
+      left: -150%;
+    }
+  }
+}
+
+footer {
+  height: 400px;
+  background: #e7e7e7;
+  padding: 64px 20px 0 87px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__image {
+    width: 740px;
+  }
+  &__middleLeft {
+    width: 414px;
+    color: #080708;
+    font-family: Faktum Test;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%;
+    span {
+      font-weight: 600;
+    }
+  }
+  &__middleRight {
+    width: 540px;
+    color: #080708;
+    font-family: Faktum Test;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+.linkedin {
+  display: block;
+  margin: 56px 0 0 1187px;
+  color: #080708;
+  font-family: Faktum Test;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.bottom {
+  width: 1600px;
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    color: #080708;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  &__right {
+    width: 412px;
+    display: flex;
+    justify-content: space-between;
+    color: #080708;
+    font-size: 22px;
+    font-weight: 400;
+    a {
+      text-decoration-line: underline;
+    }
+  }
+}
