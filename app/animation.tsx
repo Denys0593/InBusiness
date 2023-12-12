@@ -87,15 +87,12 @@ export default function animation() {
     yPercent: -100,
     opacity: 0,
   })
-    .to(
-      ".tailor",
-      {
-        yPercent: 0,
-        duration: 1,
-        opacity: 1,
-      },
-      "+=.3"
-    )
+    .to(".tailor", {
+      yPercent: 0,
+      duration: 1,
+      opacity: 1,
+      delay: 4,
+    })
     .fromTo(
       ".tailor__subtitle",
       {
