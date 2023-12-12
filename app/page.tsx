@@ -14,7 +14,7 @@ import Navigation from "./components/navigation/Navigation";
 
 export default function Home() {
   // const pi = () => {
-  //   const x = document.getElementById("xyu") as HTMLElement;
+  //   const x = document.getElementById("#") as HTMLElement;
   //   x.scrollIntoView({ behavior: "smooth" });
   // };
 
