@@ -1,11 +1,12 @@
 import "./header.scss";
-import Hamburger from "../hamburger/Hamburger";
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navigation from "../navigation/Navigation";
 import { CSSTransition } from "react-transition-group";
 
 import { gsap } from "gsap";
+import Hamburger from "../hamburger/Hamburger";
 
 export default function Header({ logo }: any) {
   const [color, setColor] = useState(false);

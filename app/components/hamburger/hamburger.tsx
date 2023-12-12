@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import "./hamburger.scss";
 
 export default function Hamburger({ show, close }: any) {
