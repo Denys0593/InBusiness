@@ -4,7 +4,7 @@ import "./aboutus.scss";
 
 import { useEffect } from "react";
 
-import animation from "./animation";
+import animation from "../animations/aboutUs";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Link from "next/link";

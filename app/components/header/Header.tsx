@@ -1,5 +1,5 @@
 import "./header.scss";
-import Hamburger from "../hamburger/Xyu";
+import Hamburger from "../hamburger/Hamb";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navigation from "../navigation/Navigation";

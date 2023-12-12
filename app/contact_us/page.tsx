@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
 import "./contactus.scss";
-import animation from "./animation";
+import animation from "../animations/contactUs";
 
 export default function ContactUs() {
   useEffect(() => {
