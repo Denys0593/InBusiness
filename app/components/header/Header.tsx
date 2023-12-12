@@ -22,8 +22,10 @@ export default function Header({ logo }: any) {
     setBody(!body);
   };
 
-  const x = document.querySelector("body") as HTMLBodyElement;
-  x.style.overflow = body ? "hidden" : "auto";
+  useEffect(() => {
+    const x = document.querySelector("body") as HTMLBodyElement;
+    x.style.overflow = body ? "hidden" : "auto";
+  }, [body]);
 
   return (
     <>
