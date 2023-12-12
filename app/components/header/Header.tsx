@@ -1,5 +1,5 @@
 import "./header.scss";
-import Xyu from "../hamburger/Hamburger";
+import Hamburger from "../hamburger/Xyu";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navigation from "../navigation/Navigation";
@@ -41,7 +41,7 @@ export default function Header({ logo }: any) {
           className="divider"
         ></div>
 
-        <Xyu show={showNav} close={close} />
+        <Hamburger show={showNav} close={close} />
       </header>
       <CSSTransition
         in={active}
