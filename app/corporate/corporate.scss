@@ -1,0 +1,345 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  width: 64px;
+  height: 4px;
+  margin-top: 24px;
+  background-color: #9ce861;
+}
+
+.small {
+  width: 32px;
+  margin-top: 0;
+}
+
+.corporateStructuring {
+  padding: 324px 0 0 87px;
+  min-height: 37.5rem;
+  background: url("../../public/back_first.png") center center/cover no-repeat;
+  &__frame {
+    width: 344px;
+    height: 170px;
+  }
+  &__home {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    span {
+      color: var(--Grey-2-lines, #ccc);
+      font-family: Faktum Test;
+      font-size: 18px;
+      line-height: 100%;
+    }
+  }
+  &__title {
+    width: 53.625rem;
+    color: #fff;
+    font-family: Faktum Test;
+    font-size: 80px;
+    margin-top: 48px;
+    line-height: 1;
+  }
+}
+
+.expertise {
+  padding: 170px 238px 170px 87px;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 150px;
+    height: 29px;
+  }
+  &__title {
+    color: #080708;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  &__right {
+    width: 1154px;
+    min-height: 436px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__top {
+    color: #000;
+    font-family: Faktum Test;
+    font-size: 48px;
+    line-height: 114%;
+  }
+  &__bottom {
+    margin-top: 36px;
+    color: #080708;
+    font-family: Mukta;
+    font-size: 28px;
+    line-height: 150%;
+    letter-spacing: -0.32px;
+  }
+  &_image {
+    margin-top: 80px;
+  }
+}
+
+.structuringApproach {
+  height: 846px;
+  background: #080708;
+  padding: 5rem 9.438rem 8.75rem 5.438rem;
+  &__title {
+    width: 42.688rem;
+    color: #fff;
+    font-size: 64px;
+    span {
+      display: inline-block;
+    }
+  }
+  &__wrapper {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    max-width: 101.125rem;
+  }
+  &__item {
+    width: 28.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    &_title {
+      color: #f5f5f5;
+      text-align: center;
+      font-family: Mukta;
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 0.32px;
+    }
+    &_text {
+      color: #808689;
+      text-align: center;
+      font-family: Mukta;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 140%;
+    }
+  }
+}
+
+.whatWeDo {
+  padding: 9.563rem 5.438rem 9.375rem 5.438rem;
+  height: 1088px;
+  background: #f5f5f5;
+  &__top {
+    max-width: 99.875rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    width: 18.25rem;
+  }
+  &__title {
+    color: #080708;
+    font-size: 24px;
+    width: 15.25rem;
+  }
+  &__right {
+    color: #080708;
+    width: 53.625rem;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  &__wrapper {
+    margin-top: 4.375rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(4.375rem, 1fr));
+    grid-template-rows: repeat(2, 12.5rem);
+    gap: 1.875rem;
+  }
+  &__item {
+    padding: 4.563rem 0 4.563rem 3.5rem;
+    border-radius: 10px;
+    background: #e7e7e7;
+    box-shadow: -1px 0px 0px 0px rgba(0, 0, 0, 0.35);
+    color: #131313;
+    text-align: justify;
+    font-family: Mukta;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 150%;
+  }
+  &__bottom {
+    position: relative;
+    top: 5rem;
+    left: 47.875rem;
+    width: 61.25rem;
+    height: 5.188rem;
+    color: #000;
+    font-family: Mukta;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 140%;
+    &:before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #52a500;
+      position: absolute;
+      top: 0.875rem;
+      left: -1.5rem;
+    }
+  }
+}
+
+.strategic {
+  min-height: 780px;
+  display: grid;
+  grid-template-columns: minmax(500px, auto) minmax(800px, auto);
+  &__left img {
+    object-fit: cover;
+    height: 100%;
+  }
+  &__right {
+    padding: 127px 235px 126px 178px;
+    background: #ebebeb;
+    &_top {
+      width: 249px;
+    }
+  }
+  &__title {
+    color: #080708;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  &__descr {
+    margin-top: 48px;
+    color: #000;
+    font-family: Mukta;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+}
+
+.related {
+  padding: 6.125rem 5.438rem 5rem 5.438rem;
+  background: #283136;
+  &__title {
+    color: #fff;
+    font-size: 64px;
+    line-height: 110%;
+  }
+  &__wrapper {
+    margin-top: 5.5rem;
+    display: grid;
+    grid-template-rows: repeat(5, minmax(auto, 6.5rem));
+    row-gap: 5rem;
+  }
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(1.438rem, 46rem) minmax(auto, 53.625rem) minmax(
+        3rem,
+        9.25rem
+      );
+    &:nth-last-child(-n + 1) {
+      &:after {
+        width: 100%;
+        bottom: -2.5rem;
+        content: "";
+        height: 1px;
+        background: #808689;
+        position: absolute;
+      }
+    }
+    &:before {
+      width: 100%;
+      top: -2.5rem;
+      content: "";
+      height: 1px;
+      background: #808689;
+      position: absolute;
+    }
+  }
+  &__left {
+    color: #f5f5f5;
+    font-family: Mukta;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  &__right {
+    &_title {
+      color: #fff;
+      font-family: Mukta;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 140%;
+    }
+    &_bottom {
+      display: none;
+      margin-top: 1.5rem;
+      color: #ccc;
+      font-family: Mukta;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 160%;
+      span {
+        color: #9ce861;
+      }
+    }
+    &_image,
+    &_imageUp {
+      display: block;
+      width: 3rem;
+      height: 2.875rem;
+      justify-self: flex-end;
+      img {
+        height: 100%;
+      }
+    }
+    &_imageUp {
+      display: none;
+    }
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 6.5rem;
+    color: #ccc;
+    font-family: Mukta;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.96px;
+    cursor: pointer;
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.beforeFooter {
+  display: flex;
+  height: 180px;
+  padding: 0px 87px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background: #080708;
+  &__left {
+    color: #808689;
+    font-family: Faktum Test;
+    font-size: 32px;
+    span {
+      color: #9ce861;
+      font-family: Faktum Test;
+      font-size: 32px;
+    }
+  }
+}

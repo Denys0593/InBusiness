@@ -1,10 +1,10 @@
+import { useState } from "react";
 import "./hamburger.scss";
 
-export default function Hamburger() {
+export default function Hamburger({ show, close }: any) {
   return (
-    <div className="hamburger">
-      <hr />
-      <hr />
+    <div onClick={show} className="hamburger">
+      <img src={close ? "close.png" : "hamburger.png"} alt="hamburger" />
     </div>
   );
 }

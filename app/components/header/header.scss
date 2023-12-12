@@ -1,0 +1,67 @@
+header {
+  height: 5.625rem;
+  width: 100%;
+  background: #080708;
+  padding: 25px 87px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 9;
+}
+
+.white {
+  background: #080708;
+  // animation: show 0.9s;
+}
+
+.linkBlack {
+  display: none;
+  max-width: 12.3rem;
+  height: 2.5rem;
+}
+
+.link {
+  display: block;
+  max-width: 196.596px;
+  height: 40px;
+}
+
+.divider {
+  position: absolute;
+  width: 1px;
+  height: 5.625rem;
+  opacity: 0.5;
+  background: #ccc;
+  right: 218px;
+  top: -16px;
+}
+
+.active-enter {
+  opacity: 0;
+}
+.active-enter-active {
+  opacity: 1;
+  transition: all 1000ms;
+}
+.active-enter-done {
+  opacity: 1;
+  transition: all 1000ms;
+}
+.active-exit {
+  opacity: 1;
+}
+.active-exit-active {
+  opacity: 0;
+  transition: all 1000ms;
+}
+
+// @keyframes show {
+//   from {
+//     opacity: 0;
+//     top: -100%;
+//   }
+//   to {
+//     opacity: 1;
+//     top: 0;
+//   }
+// }

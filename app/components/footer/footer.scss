@@ -1,0 +1,70 @@
+footer {
+  height: 400px;
+  background: #e7e7e7;
+  padding: 64px 20px 0 87px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__image {
+    width: 740px;
+  }
+  &__middleLeft {
+    width: 414px;
+    color: #080708;
+    font-family: Faktum Test;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%;
+    span {
+      font-weight: 600;
+    }
+  }
+  &__middleRight {
+    width: 540px;
+    color: #080708;
+    font-family: Faktum Test;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    span {
+      font-weight: 600;
+    }
+  }
+  &__end {
+    cursor: pointer;
+  }
+}
+.linkedin {
+  display: block;
+  margin: 56px 0 0 1187px;
+  color: #080708;
+  font-family: Faktum Test;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.bottom {
+  width: 1600px;
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    color: #080708;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  &__right {
+    width: 412px;
+    display: flex;
+    justify-content: space-between;
+    color: #080708;
+    font-size: 22px;
+    font-weight: 400;
+    a {
+      text-decoration-line: underline;
+    }
+  }
+}

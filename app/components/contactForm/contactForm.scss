@@ -1,0 +1,109 @@
+.contactForm {
+  position: relative;
+  margin: 6.87rem 5.44rem 8.12rem 5.44rem;
+
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 109.125rem;
+  }
+  &__title {
+    color: #080708;
+    font-size: 5rem;
+    width: 29.375rem;
+  }
+  &__text {
+    color: #080708;
+    font-family: Mukta;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 130%;
+    width: 63.875rem;
+    height: 5.75rem;
+    flex-shrink: 0;
+  }
+  hr {
+    margin-top: 2.12rem;
+    width: 109.125rem;
+    height: 0.125rem;
+    background: #080708;
+  }
+  .formContact {
+    margin-top: 7.12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__input {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      label {
+        color: #080708;
+        font-size: 2rem;
+        letter-spacing: -0.04rem;
+      }
+      input {
+        width: 62.875rem;
+        height: 4.5rem;
+        color: #000;
+        font-family: Mukta;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 150%;
+        border: 1px solid #080708;
+        outline: none;
+        padding: 0.75rem 1.75rem;
+      }
+      &:after {
+        content: "";
+        width: 108.125rem;
+        height: 0.0625rem;
+        background: #ababab;
+        position: absolute;
+        top: 4.45rem;
+      }
+    }
+    &__private {
+      margin-left: 46.25rem;
+      margin-top: 3rem;
+
+      input {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: #f5f5f5;
+      }
+    }
+    &__div {
+      display: inline-block;
+      color: #080708;
+      font-family: Mukta;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-left: 1rem;
+      a {
+        text-decoration-line: underline;
+      }
+    }
+    button {
+      margin-top: 2.5rem;
+      display: flex;
+      width: 62.875rem;
+      height: 4rem;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      align-self: end;
+      background: #9ce861;
+      color: #080708;
+      font-family: Faktum Test;
+      font-size: 1.25rem;
+      &:hover {
+        border-radius: 8px;
+        background: hsl(120, 60%, 70%);
+      }
+    }
+  }
+}

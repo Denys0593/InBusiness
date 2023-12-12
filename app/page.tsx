@@ -1,13 +1,23 @@
 "use client";
-import Link from "next/link";
 
-import Hamburger from "./components/hamburger/hamburger";
-import firstImg from "../public/first_img.png";
+import { useEffect, useState } from "react";
+
 import "./styles.scss";
-import { useEffect } from "react";
+
 import animation from "./animation";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Link from "next/link";
+import Card from "./components/card/Card";
+import ContactForm from "./components/contactForm/ContactForm";
+import Navigation from "./components/navigation/Navigation";
 
 export default function Home() {
+  // const pi = () => {
+  //   const x = document.getElementById("xyu") as HTMLElement;
+  //   x.scrollIntoView({ behavior: "smooth" });
+  // };
+
   useEffect(() => {
     animation();
   }, []);
@@ -22,251 +32,85 @@ export default function Home() {
         <div className="loader__item"></div>
         <div className="loader__item"></div>
       </div>
-      <header id="header">
-        <Link className="link" href="/">
-          <img src="/Logo.png" alt="" />
-        </Link>
-        <div className="divider"></div>
-        <Hamburger />
-      </header>
+      <Header logo={"/mainBus.png"} />
+      <section className="tailor">
+        <img src="mainBackground.png" alt="dfg" />
+        <div className="tailor__subtitle">Best solutions for business</div>
+        <h1 className="tailor__title">
+          Tailor-Made
+          <br />
+          Corporate Secretarial Services in Dubai
+        </h1>
 
-      <section className="about">
-        <div className="about__frame">
-          <div className="about__home">
-            Home &gt;
-            <span> About Us</span>
-          </div>
-          <h1 className="about__title">About Us</h1>
-          <div className="line header__line" />
+        <div className="tailor__down">
+          <img src="downMain.svg" alt="downMain" />
         </div>
       </section>
 
       <section className="whoWeAre">
-        <div className="title whoWeAre__left">
-          <div className="line small" />
-          <div className="whoWeAre__title">Who we are</div>
+        <h2 className="whoWeAre__title">Who we are</h2>
+        <hr data-hr="header" />
+        <div className="whoWeAre__text">
+          We provide tailor-made corporate secretarial services, including
+          company formation, bank account opening, accounting, taxation,
+          immigration support and compliance maintenance solutions.
+          <br />
+          <br />
+          InBusiness is a leading corporate service provider firm streamlined to
+          provide individual entrepreneurs, single family offices, cross border
+          corporations, small and medium-sized enterprises.
         </div>
-        <div className="whoWeAre__right">
-          <p className="whoWeAre__top">
-            InBusiness Advisory DMCC, a leading management consultancy firm, is
-            streamlined to provide entrepreneurs with a one-stop destination to
-            fulfil their corporate needs.{" "}
-          </p>
-          <p className="whoWeAre__bottom">
-            Here at InBusiness Advisory DMCC, we are professional corporate
-            services providers supporting individual entrepreneurs, cross-border
-            corporations and small and medium-sized enterprises in going global
-            by setting up a company in the United Arab Emirates (UAE) or other
-            jurisdictions.
-          </p>
-        </div>
+        <hr data-hr="bottom" />
+        <button className="whoWeAre__btn">
+          <div className="whoWeAre__left">Learn more</div>
+          <img src="arrowRight.svg" alt="right" className="whoWeAre__right" />
+        </button>
       </section>
 
-      <section className="approach">
-        <div className="approach__left">
-          <img src="/first_img.png" alt="city" />
-        </div>
-        <div className="approach__right">
-          <div className="title approach__right_top">
-            <div className="line small" />
-            <div className="approach__title">How we approach</div>
-          </div>
-          <p className="approach__descr">
-            As our dictums are at the highest level of confidentiality,
-            reliability and professionalism, we strive to shape our
-            administrative services specifically around client requirements.
-            This can range from assistance in choosing the most befitting
-            jurisdiction to the development of a specific commercial strategy
-            before going global.
-          </p>
-        </div>
+      <section className="whatWeDo">
+        <h2 className="whatWeDo__title">What we do</h2>
+        <div className="whatWeDo__left"></div>
+        <div className="whatWeDo__right"></div>
+        <Card />
       </section>
 
-      <div className="someText">
-        Informed by the combined commercial, financial and legal backgrounds of
-        our executives and staff, we aim to understand your business and its
-        objectives.
-      </div>
-
-      <section className="inAddition">
-        <div className="inAddition__left">
-          <img src="second_img.png" alt="city" />
-        </div>
-        <div className="inAddition__right">
-          <div className="title inAddition__right_top">
-            <div className="line small" />
-            <div className="inAddition__title">In addition</div>
-          </div>
-          <p className="inAddition__descr">
-            In our opinion, the starting point of all our client relationships
-            is gaining a deep understanding and insight into their business, its
-            core issues and their priorities before performing the corporate
-            structuring and administration.
+      <section className="truly">
+        <div className="truly__wrapper">
+          <h2 className="truly__title">Truly Transparent</h2>
+          <hr />
+          <div className="truly__text">
+            InBusiness is a leading corporate service provider firm streamlined
+            to provide individual entrepreneurs, single family offices, cross
+            border corporations, small and medium-sized enterprises with a
+            one-stop destination to fulfill their corporate needs.
             <br />
             <br />
-            <span>
-              This, combined with respect, trust and integrity, enables us to
-              identify opportunities for our clients in order to increase their
-              revenue, reduce costs and improve margins and operating
-              efficiencies.
-            </span>
-          </p>
-        </div>
-      </section>
-
-      <section className="values">
-        {/* <div className="values_title">Our values</div> */}
-        <div className="values_title">
-          <span data-go="go">O</span>
-          <span data-go="go">u</span>
-          <span data-go="go">r&nbsp;</span>
-          <span data-go="go">v</span>
-          <span data-go="go">a</span>
-          <span data-go="go">l</span>
-          <span data-go="go">u</span>
-          <span data-go="go">e</span>
-          <span data-go="go">s</span>
-        </div>
-        <div className="values__wrapper">
-          <div className="values__top">
-            <div className="values__item">
-              <div className="values__title">Solutions driven</div>
-              <div className="values__descr">
-                We look for approaches that may not be obvious to find original
-                solutions. We try to deeply understand the task and think ahead
-                for you.
-              </div>
-              <img
-                src="placeholder.png"
-                alt="placeholder"
-                className="values__image"
-              />
-            </div>
-            <div className="values__item">
-              <div className="values__title">Competency</div>
-              <div className="values__descr">
-                We take ownership of tasks, at the same time looking for
-                continual improvement. We believe that you cannot properly
-                represent a client without understanding their business.
-              </div>
-              <img
-                src="placeholder.png"
-                alt="placeholder"
-                className="values__image"
-              />
-            </div>
-            <div className="values__item">
-              <div className="values__title">Confidentiality</div>
-              <div className="values__descr">
-                Our main value is to keep all information confidential.
-              </div>
-              <img
-                src="placeholder.png"
-                alt="placeholder"
-                className="values__image"
-              />
-            </div>
+            We provide tailor-made corporate secretarial services, including
+            company formation, bank account opening, accounting, taxation,
+            immigration support and compliance maintenance solutions
           </div>
-          <div className="values__bottom">
-            <div className="values__item">
-              <div className="values__title">Honesty</div>
-              <div className="values__descr">
-                Behaving with deep levels of honesty is fundamental to who we
-                are.
-              </div>
-              <img
-                src="placeholder.png"
-                alt="placeholder"
-                className="values__image"
-              />
-            </div>
-            <div className="values__item">
-              <div className="values__title">Partnership oriented</div>
-              <div className="values__descr">
-                Our philosophy has always been to have fewer clients and to
-                focus on strong, long-term business relationships.{" "}
-              </div>
-              <img
-                src="placeholder.png"
-                alt="placeholder"
-                className="values__image"
-              />
-            </div>
-            <div className="values__item">
-              <div className="values__title">Attention</div>
-              <div className="values__descr">
-                Our main value is to keep all information confidential.
-              </div>
-              <img
-                src="placeholder.png"
-                alt="placeholder"
-                className="values__image"
-              />
-            </div>
+        </div>
+        <div className="truly__bottomWrapper">
+          <hr data-hr="small" />
+          <a href="#" className="truly__btn">
+            <div className="truly__left">Our values</div>
+            <img
+              src="./arrowRightBlack.svg"
+              alt="arrowRightBlack"
+              className="truly__right"
+            />
+          </a>
+          <div className="truly__image">
+            <img src="./Uptown.png" alt="Uptown" />
           </div>
         </div>
       </section>
 
-      <div className="beforeFooter">
-        <div className="beforeFooter__background">
-          <div data-shot="her">If you are an individual entrepreneur or an</div>
-          <div data-shot="him">
-            international business in need of professional
-          </div>
-          <div data-shot="her">
-            corporate services with linkage to local expertise,
-          </div>
-          <div data-shot="him">
-            please do not hesitate to contact us for more
-          </div>
-          <div data-shot="her">information on how we can assist you.</div>
-        </div>
-        <div className="beforeFooter__bottom">
-          <div className="beforeFooter__left">
-            Let’s make something remarkable, together.
-          </div>
-          <button className="beforeFooter__right">Contact Us</button>
-        </div>
-      </div>
-
-      <footer>
-        <div className="header">
-          <Link href="/" className="header__image">
-            <img src="topBlack.png" alt="logo" />
-          </Link>
-          <div>
-            <div className="header__middleLeft">
-              <span>Contacts:</span>
-              <br />
-              admin@in-business.com
-              <br />
-              +971 44  56 0771
-            </div>
-          </div>
-          <div>
-            <div className="header__middleRight">
-              <span>Address</span>
-              <br />
-              InBusiness Advisory DMCC
-              <br /> Po Box 338425
-              <br /> 3910, Platinum Tower, JLT, Dubai, UAE
-            </div>
-          </div>
-          <Link href="#header" className="header__end">
-            <img src="topbtn.png" alt="topbtn" />
-          </Link>
-        </div>
-        <Link className="linkedin" href="#">
-          LinkedIn
-        </Link>
-        <div className="bottom">
-          <div className="bottom__left">2022. InBusiness Advisory DMCC</div>
-          <div className="bottom__right">
-            <Link href="#">Terms and Conditions</Link>
-            <Link href="#">Privacy Policy</Link>
-          </div>
-        </div>
-      </footer>
+      <ContactForm />
+      <Footer logo={"mainBusBlack.png"} />
     </main>
   );
+}
+function display(value: any) {
+  throw new Error("Function not implemented.");
 }

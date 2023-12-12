@@ -1,258 +1,247 @@
-"use client";
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import animat from "./components/header/animat";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline();
 const tlLoader = gsap.timeline();
-// const laptopScreen = window.matchMedia("(min-width: 992px)");
-
+const tl = gsap.timeline();
+const header = gsap.timeline();
+const tlForm = gsap.timeline();
 export default function animation() {
-  tlLoader
-    .to(".loader__item", {
-      css: {
-        marginTop: 0,
+  animat();
+  // tlLoader
+  //   .to(".loader__item", {
+  //     css: {
+  //       marginTop: 0,
+  //     },
+  //     duration: 0.4,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__item", {
+  //     css: {
+  //       yPercent: -100,
+  //     },
+  //     duration: 0.5,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 1,
+  //     duration: 1,
+  //     scale: 1.1,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     scale: 0.9,
+  //   })
+  //   .to(
+  //     ".loader",
+  //     {
+  //       opacity: 0,
+  //       duration: 0.5,
+  //     },
+  //     "-=0.4"
+  //   )
+  //   .to(".loader", {
+  //     visibility: "hidden",
+  //     display: "none",
+  //   });
+
+  tlForm
+    .set(".contactForm", {
+      left: "-100%",
+      margin: 0,
+    })
+    .set(".contactForm__formik", {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      backgroundImage:
+        "linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)",
+      zIndex: "55",
+      left: "100%",
+    })
+    .to(".contactForm", {
+      scrollTrigger: {
+        trigger: ".contactForm",
+        start: "top center",
+        end: "+=30%",
+        scrub: true,
       },
-      duration: 0.4,
-      stagger: 0.25,
+      left: 0,
+      margin: "6.87rem 5.44rem 8.12rem 5.44rem",
     })
-    .to(".loader__item", {
-      css: {
-        yPercent: -100,
+    .to(".contactForm__formik", {
+      scrollTrigger: {
+        trigger: ".contactForm",
+        start: "top center",
+        end: "+=20%",
+        scrub: true,
       },
-      duration: 0.5,
-      stagger: 0.25,
-    })
-    .to(".loader__hello", {
-      opacity: 1,
-      duration: 1,
-      scale: 1.1,
-    })
-    .to(".loader__hello", {
+      display: "none",
+      xPercent: 100,
       opacity: 0,
-      duration: 1,
-      scale: 0.9,
-    })
-    .to(
-      ".loader",
-      {
-        opacity: 0,
-        duration: 0.5,
-      },
-      "-=0.4"
-    )
-    .to(".loader", {
-      visibility: "hidden",
     });
-  tl.fromTo(
-    ".about__home",
-    {
-      x: -100,
-      opacity: 0,
-    },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 1,
-    },
-    4
-  )
-    .fromTo(
-      ".about__title",
+  tl.set(".tailor", {
+    yPercent: -100,
+    opacity: 0,
+  })
+    .to(
+      ".tailor",
       {
-        x: 100,
+        yPercent: 0,
+        duration: 1,
+        opacity: 1,
+      },
+      "+=.3"
+    )
+    .fromTo(
+      ".tailor__subtitle",
+      {
+        y: -100,
         opacity: 0,
-        color: "#a19797",
+        scaleY: -1,
+        color: "#000",
       },
       {
-        x: 0,
+        y: 0,
         opacity: 1,
-        duration: 1,
+        scaleY: 1,
+        duration: 2,
+        color: "#fff",
+      }
+    )
+    .fromTo(
+      ".tailor__title",
+      {
+        y: 100,
+        opacity: 0,
+        color: "#000",
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
         color: "#fff",
       },
-      5
-    )
-    .fromTo(
-      ".header__line",
-      {
-        width: 0,
-        opacity: 0,
-        background: "#243617",
-      },
-      {
-        opacity: 1,
-        width: 64,
-        background: "#9ce861",
-        duration: 1,
-      },
-      5
+      "-=1.5"
     );
-
-  gsap.to(".whoWeAre", {
+  gsap.from(".tailor__down", {
     scrollTrigger: {
       trigger: ".whoWeAre",
-      start: "center center",
-      scrub: true,
+      start: "top bottom",
+      end: "+=300",
     },
-    background: "rgba(0, 0, 0, 0.482)",
-  });
-  gsap.to(".whoWeAre__title", {
-    scrollTrigger: {
-      trigger: ".whoWeAre__title",
-      start: "-300 top",
-      scrub: true,
-    },
-    color: "rgb(197, 197, 197)",
-  });
-  gsap.to(".whoWeAre__top", {
-    scrollTrigger: {
-      trigger: ".whoWeAre__top",
-      start: "top 200",
-      scrub: true,
-    },
-    color: "rgb(197, 197, 197)",
-  });
-  gsap.to(".whoWeAre__bottom", {
-    scrollTrigger: {
-      trigger: ".whoWeAre__bottom",
-      start: "top 200",
-      scrub: true,
-    },
-    color: "rgb(197, 197, 197)",
+    y: -100,
+    opacity: 0,
+    display: "none",
   });
 
-  gsap.from(".approach__left", {
+  gsap.from(".whoWeAre__title", {
     scrollTrigger: {
-      trigger: ".approach",
+      trigger: ".whoWeAre",
       start: "100 bottom",
-      end: "+=600px",
+      end: "+=350px",
+      scrub: true,
+    },
+    x: "-150px",
+    opacity: 0,
+  });
+  gsap.from("[data-hr='header']", {
+    scrollTrigger: {
+      trigger: ".whoWeAre",
+      start: "0 center",
+      end: "+=300px",
+      scrub: true,
+    },
+    height: "15px",
+    xPercent: 110,
+    background: "#000",
+    display: "none",
+  });
+  gsap.from(".whoWeAre__text", {
+    scrollTrigger: {
+      trigger: ".whoWeAre",
+      start: "top center",
+      end: "+=200px",
+      scrub: true,
+    },
+    x: 200,
+    opacity: 0,
+  });
+  gsap.from("[data-hr='bottom']", {
+    scrollTrigger: {
+      trigger: "[data-hr='bottom']",
+      start: "100 bottom",
+      end: "+=200px",
+      scrub: true,
+    },
+    height: "15px",
+    xPercent: -110,
+    background: "#000",
+  });
+  gsap.from(".whoWeAre__btn", {
+    scrollTrigger: {
+      trigger: ".whoWeAre__text",
+      start: "bottom 60%",
+      end: "+=200px",
       scrub: true,
     },
     opacity: 0,
-  });
-  gsap.from(".approach__right_top", {
-    scrollTrigger: {
-      trigger: ".approach",
-      start: "400 bottom",
-      end: "+=300px",
-    },
-    y: -120,
-    opacity: 0,
-  });
-  gsap.from(".approach__descr", {
-    scrollTrigger: {
-      trigger: ".approach",
-      start: "600 bottom",
-      end: "+=300px",
-    },
-    yPercent: -40,
-    opacity: 0,
+    y: -60,
   });
 
-  gsap.from(".someText", {
+  gsap.to(".whatWeDo__left", {
     scrollTrigger: {
-      trigger: ".someText",
-      start: "40% bottom",
-      end: "+=450px",
-      scrub: true,
+      trigger: ".whatWeDo",
+      start: "85% bottom",
+    },
+    borderRadius: "0 25% 25% 0",
+    opacity: 0,
+    xPercent: 200,
+    display: "none",
+    duration: 2,
+  });
+  gsap.to(".whatWeDo__right", {
+    scrollTrigger: {
+      trigger: ".whatWeDo",
+      start: "85% bottom",
+    },
+    borderRadius: "25% 0 0 25%",
+    opacity: 0,
+    xPercent: -200,
+    duration: 2,
+  });
+
+  gsap.from(".truly", {
+    scrollTrigger: {
+      trigger: ".truly",
+      start: "100 bottom",
+      end: "+=40%",
     },
     scale: 0.5,
-    opacity: 0,
-    color: "#578493",
+    borderRadius: "5rem",
+    backgroundImage: "linear-gradient(to right, red , yellow)",
   });
-
-  gsap.from(".inAddition__left", {
+  gsap.to(".truly__wrapper", {
     scrollTrigger: {
-      trigger: ".inAddition",
-      start: "-150 50%",
-      end: "+=50%",
-    },
-    xPercent: -100,
-    opacity: 0,
-  });
-
-  gsap.from(".inAddition__right", {
-    scrollTrigger: {
-      trigger: ".inAddition",
-      start: "-150 50%",
-      end: "+=50%",
-    },
-    xPercent: 100,
-    opacity: 0,
-  });
-
-  gsap.from("[data-go='go']", {
-    scrollTrigger: {
-      trigger: ".values",
-      start: "150 bottom",
-      end: "+=50%",
+      trigger: ".truly__btn",
+      start: "top center",
+      end: "+=60%",
       scrub: true,
     },
-    opacity: 0,
-    yPercent: -200,
-    stagger: {
-      amount: 1.5,
-      from: "center",
-    },
+    y: -220,
   });
-
-  gsap.from(".values__top .values__item", {
+  gsap.to(".truly__bottomWrapper", {
     scrollTrigger: {
-      trigger: ".values__top",
-      start: "150 bottom",
-      end: "+=40%",
+      trigger: ".truly__bottomWrapper",
+      start: "top center",
+      end: "+=60%",
       scrub: true,
     },
-    stagger: 1,
-    xPercent: -100,
-    opacity: 0,
-  });
-
-  gsap.from(".values__bottom .values__item", {
-    scrollTrigger: {
-      trigger: ".values__bottom",
-      start: "150 bottom",
-      end: "+=50%",
-      scrub: true,
-    },
-    stagger: 0.25,
-    xPercent: 100,
-    opacity: 0,
-  });
-
-  gsap.from("[data-shot='her']", {
-    scrollTrigger: {
-      trigger: ".beforeFooter",
-      start: "100 bottom",
-      end: "+=70%",
-      scrub: true,
-    },
-    xPercent: -100,
-    stagger: 0.25,
-    opacity: 0,
-  });
-
-  gsap.from("[data-shot='him']", {
-    scrollTrigger: {
-      trigger: ".beforeFooter",
-      start: "100 bottom",
-      end: "+=70%",
-      scrub: true,
-    },
-    xPercent: 100,
-    stagger: 0.25,
-    opacity: 0,
-  });
-
-  gsap.from(".beforeFooter__bottom", {
-    scrollTrigger: {
-      trigger: ".beforeFooter__bottom",
-      start: "200 bottom",
-      end: "+=70%",
-    },
-    opacity: 0,
-    y: 40,
+    y: -200,
+    x: -200,
+    scale: 1.2,
   });
 }
