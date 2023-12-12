@@ -1,12 +1,11 @@
 import "./header.scss";
-
+import Xyu from "../hamburger/Hamburger";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navigation from "../navigation/Navigation";
 import { CSSTransition } from "react-transition-group";
 
 import { gsap } from "gsap";
-import Hamburger from "../hamburger/Hamburger";
 
 export default function Header({ logo }: any) {
   const [color, setColor] = useState(false);
@@ -42,7 +41,7 @@ export default function Header({ logo }: any) {
           className="divider"
         ></div>
 
-        <Hamburger show={showNav} close={close} />
+        <Xyu show={showNav} close={close} />
       </header>
       <CSSTransition
         in={active}
