@@ -117,9 +117,9 @@ export default function animation() {
     repeat: -1,
   });
 
-  gsap.from(".whatWeDo__left", {
+  gsap.from(".whatWeDo__leftside", {
     scrollTrigger: {
-      trigger: ".whatWeDo__left",
+      trigger: ".whatWeDo__leftside",
       start: "top 100",
       end: "+=300",
       scrub: true,
@@ -128,7 +128,7 @@ export default function animation() {
     opacity: 0,
   });
 
-  gsap.from(".whatWeDo__right", {
+  gsap.from(".whatWeDo__rightside", {
     scrollTrigger: {
       trigger: ".whatWeDo",
       start: "top 150",

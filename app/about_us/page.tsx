@@ -1,13 +1,14 @@
 "use client";
 
 import "./aboutus.scss";
-
+import "./_media_aboutUs.scss";
 import { useEffect } from "react";
 
 import animation from "../animations/aboutUs";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Link from "next/link";
+import { Metadata } from "next";
 
 export default function AboutUs() {
   useEffect(() => {
@@ -102,7 +103,7 @@ export default function AboutUs() {
       </section>
 
       <section className="values">
-        <div className="values_title">
+        <div className="values__title">
           <span data-go="go">O</span>
           <span data-go="go">u</span>
           <span data-go="go">r&nbsp;</span>
@@ -116,7 +117,7 @@ export default function AboutUs() {
         <div className="values__wrapper">
           <div className="values__top">
             <div className="values__item">
-              <div className="values__title">Solutions driven</div>
+              <div className="values__item_title">Solutions driven</div>
               <div className="values__descr">
                 We look for approaches that may not be obvious to find original
                 solutions. We try to deeply understand the task and think ahead
@@ -129,7 +130,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="values__item">
-              <div className="values__title">Competency</div>
+              <div className="values__item_title">Competency</div>
               <div className="values__descr">
                 We take ownership of tasks, at the same time looking for
                 continual improvement. We believe that you cannot properly
@@ -142,7 +143,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="values__item">
-              <div className="values__title">Confidentiality</div>
+              <div className="values__item_title">Confidentiality</div>
               <div className="values__descr">
                 Our main value is to keep all information confidential.
               </div>
@@ -155,7 +156,7 @@ export default function AboutUs() {
           </div>
           <div className="values__bottom">
             <div className="values__item">
-              <div className="values__title">Honesty</div>
+              <div className="values__item_title">Honesty</div>
               <div className="values__descr">
                 Behaving with deep levels of honesty is fundamental to who we
                 are.
@@ -167,7 +168,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="values__item">
-              <div className="values__title">Partnership oriented</div>
+              <div className="values__item_title">Partnership oriented</div>
               <div className="values__descr">
                 Our philosophy has always been to have fewer clients and to
                 focus on strong, long-term business relationships.{" "}
@@ -179,7 +180,7 @@ export default function AboutUs() {
               />
             </div>
             <div className="values__item">
-              <div className="values__title">Attention</div>
+              <div className="values__item_title">Attention</div>
               <div className="values__descr">
                 Our main value is to keep all information confidential.
               </div>

@@ -8,6 +8,9 @@ const tlLoader = gsap.timeline();
 const tl = gsap.timeline();
 const header = gsap.timeline();
 const tlForm = gsap.timeline();
+
+// const laptopScreen = window.matchMedia("(min-width: 992px)");
+
 export default function animation() {
   animat();
   tlLoader

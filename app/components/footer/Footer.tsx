@@ -34,14 +34,17 @@ export default function Footer({ logo }: any) {
               <br /> Po Box 338425
               <br /> 3910, Platinum Tower, JLT, Dubai, UAE
             </div>
+            <Link className="linkedin" href="#">
+              LinkedIn
+            </Link>
           </div>
           <div onClick={up} className="header__end">
             <img src="topbtn.png" alt="topbtn" />
           </div>
         </div>
-        <Link className="linkedin" href="#">
+        {/* <Link className="linkedin" href="#">
           LinkedIn
-        </Link>
+        </Link> */}
         <div className="bottom">
           <div className="bottom__left">2022. InBusiness Advisory DMCC</div>
           <div className="bottom__right">

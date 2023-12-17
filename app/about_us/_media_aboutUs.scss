@@ -1,0 +1,428 @@
+@media (max-width: 1920px) {
+  .whoWeAre {
+    padding: 122px 230px 120px 87px;
+    gap: 5%;
+  }
+  .approach,
+  .inAddition {
+    grid-template-columns: minmax(30rem, 49.8125rem) minmax(auto, 1106px);
+    &__right {
+      padding: 12.13rem 8.875rem 12.12rem 9.563rem;
+    }
+  }
+  .inAddition {
+    &__right {
+      padding: 7.13rem 6.875rem 8.12rem 7.563rem;
+    }
+  }
+  .values {
+    &__top,
+    &__bottom {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__item {
+      grid-template-rows: minmax(43px, auto) minmax(124px, auto) 231px;
+    }
+  }
+  .beforeFooter {
+    &__background {
+      padding: 153px 247px;
+    }
+    &__bottom {
+      padding: 100px 237px 99px 149px;
+    }
+    &__right {
+      &:before {
+        left: -125%;
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .whoWeAre {
+    &__right {
+      width: 950px;
+      min-height: 350px;
+      height: 370px;
+      gap: 5%;
+    }
+    &__top {
+      font-size: 36px;
+    }
+    &__bottom {
+      font-size: 26px;
+    }
+  }
+  .approach {
+    min-height: 600px;
+    grid-template-columns: minmax(20rem, 49.8125rem) minmax(auto, 1106px);
+    &__right {
+      padding: 5.13rem 10.875rem 5.12rem 7.563rem;
+    }
+    &__descr {
+      font-size: 28px;
+    }
+  }
+  .someText {
+    margin: 100px auto;
+    font-size: 37px;
+    width: 1000px;
+  }
+  .inAddition {
+    min-height: 600px;
+    grid-template-columns: minmax(20rem, 49.8125rem) minmax(548px, 885px);
+    &__left {
+      height: 100%;
+    }
+    &__right {
+      padding: 7.13rem 4.875rem 7.12rem 6.563rem;
+    }
+    &__descr {
+      margin-top: 20px;
+      font-size: 24px;
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+  .values {
+    &__item {
+      &_title {
+        font-size: 27px;
+      }
+    }
+    &__descr {
+      font-size: 18px;
+    }
+    &__image {
+      margin-top: 12px;
+    }
+  }
+  .beforeFooter {
+    min-height: 550px;
+    &__background {
+      padding: 95px 131px;
+      font-size: 38px;
+    }
+    &__bottom {
+      padding: 60px 180px 80px 120px;
+    }
+    &__left {
+      width: auto;
+      font-size: 28px;
+    }
+    &__right {
+      font-size: 28px;
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .whoWeAre {
+    padding: 60px 120px 60px 87px;
+    flex-direction: column;
+    &__left {
+      width: 11.25rem;
+      height: 5rem;
+    }
+    &__right {
+      width: 100%;
+      min-height: 260px;
+      height: 270px;
+    }
+    &__top {
+      font-size: 30px;
+    }
+    &__bottom {
+      font-size: 24px;
+    }
+  }
+  .approach {
+    height: 600px;
+    min-height: 0;
+    grid-template-columns: minmax(15rem, 30rem) minmax(auto, 1106px);
+    &__left {
+      img {
+        object-fit: cover;
+      }
+    }
+    &__right {
+      padding: 8.13rem 2.875rem 0 2.563rem;
+    }
+    &__descr {
+      font-size: 22px;
+      margin-top: 24px;
+    }
+  }
+  .someText {
+    font-size: 28px;
+    width: 800px;
+  }
+  .inAddition {
+    height: 545px;
+    grid-template-columns: minmax(7rem, 30rem) minmax(auto, 885px);
+    &__left {
+      img {
+        object-fit: cover;
+      }
+    }
+    &__right {
+      padding: 6.13rem 1.875rem 3rem 2.563rem;
+    }
+  }
+  .values {
+    padding: 55px 47px 50px 47px;
+    &__title {
+      font-size: 56px;
+    }
+    &__wrapper {
+      grid-template-rows: repeat(2, minmax(363px, auto));
+    }
+    &__item {
+      padding: 18px 18px 18px 18px;
+    }
+  }
+  .beforeFooter {
+    min-height: 150px;
+    &__background {
+      padding: 45px 60px;
+      font-size: 26px;
+    }
+    &__bottom {
+      padding: 40px 120px 40px 80px;
+    }
+    &__left,
+    &__right {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 234px 0 0 87px;
+    min-height: 450px;
+    &__home {
+      font-size: 16px;
+    }
+    &__title {
+      font-size: 64px;
+      margin-top: 28px;
+    }
+  }
+  .whoWeAre {
+    padding: 60px 60px 60px 60px;
+    &__left {
+      height: 2rem;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__right {
+      height: unset;
+      min-height: unset;
+      margin-top: 16px;
+    }
+    &__top {
+      font-size: 24px;
+    }
+    &__bottom {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  .approach,
+  .inAddition {
+    height: unset;
+    min-height: unset;
+    grid-template-columns: minmax(7rem, 25rem) minmax(auto, 1106px);
+    &__right {
+      padding: 20% 4% 20% 4%;
+      &_top {
+        width: 175px;
+      }
+    }
+    &__title {
+      font-size: 16px;
+    }
+    &__descr {
+      font-size: 17px;
+      margin-top: 24px;
+    }
+    .small {
+      width: 24px;
+    }
+  }
+  .someText {
+    margin: 0;
+    padding: 5% 10%;
+    width: unset;
+    font-size: 18px;
+  }
+  .inAddition {
+    &__right {
+      padding: 10% 4%;
+      &_top {
+        width: 120px;
+      }
+    }
+    &__descr {
+      span {
+        display: block;
+        font-size: 18px;
+      }
+    }
+  }
+  .values {
+    padding: 20px 20px 0 20px;
+    &__title {
+      font-size: 45px;
+    }
+    &__wrapper {
+      margin-top: 25px;
+      grid-template-rows: repeat(2, minmax(auto, 1fr));
+    }
+    &__item {
+      grid-template-rows: 32px minmax(124px, auto) minmax(100px, 147px);
+      &_title {
+        font-size: 20px;
+      }
+    }
+    &__descr {
+      font-size: 15px;
+    }
+  }
+  .beforeFooter {
+    &__background {
+      padding: 5%;
+      font-size: 20px;
+    }
+    &__bottom {
+      padding: 40px 100px 40px 60px;
+      align-items: center;
+    }
+    &__left,
+    &__right {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    background: url("../../public/first_background.png") 50% / cover no-repeat;
+    padding: 14.25rem 1rem 3rem 1rem;
+  }
+  .whoWeAre {
+    padding: 3.5rem 1rem;
+    &__right {
+      margin-top: 1.5rem;
+    }
+    &__bottom {
+      margin-top: 1.5rem;
+    }
+  }
+  .approach {
+    grid-template-columns: none;
+    &__descr {
+      margin-top: 2.25rem;
+    }
+    &__title {
+      font-size: 1.25rem;
+    }
+    &__right {
+      &_top {
+        width: 12.813rem;
+      }
+    }
+  }
+  .someText {
+    padding: 3rem 1rem;
+    font-size: 2rem;
+  }
+
+  .inAddition {
+    grid-template-columns: none;
+    &__right {
+      padding: 3rem 1rem;
+    }
+    &__descr {
+      font-size: 1.25rem;
+      span {
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__right {
+      &_top {
+        width: 9.813rem;
+      }
+    }
+  }
+  .values {
+    padding: 3.5rem 1rem;
+    &__title {
+      font-size: 2rem;
+      text-align: unset;
+    }
+    &__top,
+    &__bottom {
+      grid-template-columns: none;
+      border-bottom: none;
+    }
+    &__item {
+      grid-template-rows: none;
+      padding: 0;
+      padding-top: 2.5rem;
+      border-left: none;
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #d3d3d3;
+        position: absolute;
+        z-index: 10;
+        bottom: -1.5rem;
+      }
+      &_title {
+        font-size: 1.5rem;
+      }
+    }
+    &__descr {
+      font-size: 1.25rem;
+    }
+    &__image {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+  .beforeFooter {
+    &__background {
+      padding: 2.88rem 1rem;
+      font-size: 1.5rem;
+    }
+    &__bottom {
+      padding: 3rem 0 0 0;
+      flex-direction: column;
+      gap: 3rem;
+    }
+    &__left {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    &__right {
+      background: #323b40;
+      color: #f5f5f5;
+      padding: 2.5rem;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+  }
+}

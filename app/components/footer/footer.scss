@@ -2,69 +2,181 @@ footer {
   height: 400px;
   background: #e7e7e7;
   padding: 64px 20px 0 87px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  &__image {
-    width: 740px;
-  }
-  &__middleLeft {
-    width: 414px;
-    color: #080708;
-    font-family: Faktum Test;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 140%;
-    span {
-      font-weight: 600;
-    }
-  }
-  &__middleRight {
-    width: 540px;
-    color: #080708;
-    font-family: Faktum Test;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    span {
-      font-weight: 600;
-    }
-  }
-  &__end {
-    cursor: pointer;
-  }
-}
-.linkedin {
-  display: block;
-  margin: 56px 0 0 1187px;
-  color: #080708;
-  font-family: Faktum Test;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.bottom {
-  width: 1600px;
-  margin-top: 56px;
-  display: flex;
-  justify-content: space-between;
-  &__left {
-    color: #080708;
-    font-size: 22px;
-    font-weight: 400;
-  }
-  &__right {
-    width: 412px;
+  .header {
     display: flex;
     justify-content: space-between;
+    &__image {
+      max-width: 740px;
+    }
+    &__middleLeft {
+      max-width: 414px;
+      color: #080708;
+      font-family: Faktum Test;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 140%;
+      span {
+        font-weight: 600;
+      }
+    }
+    &__middleRight {
+      max-width: 540px;
+      color: #080708;
+      font-family: Faktum Test;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      span {
+        font-weight: 600;
+      }
+    }
+    &__end {
+      cursor: pointer;
+    }
+  }
+  .linkedin {
+    display: block;
+    margin-top: 56px;
     color: #080708;
+    font-family: Faktum Test;
     font-size: 22px;
-    font-weight: 400;
-    a {
-      text-decoration-line: underline;
+    font-weight: 600;
+  }
+
+  .bottom {
+    width: 100%;
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      color: #080708;
+      font-size: 22px;
+      font-weight: 400;
+    }
+    &__right {
+      width: 412px;
+      display: flex;
+      justify-content: space-between;
+      color: #080708;
+      font-size: 22px;
+      font-weight: 400;
+      a {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  footer {
+    .header {
+      &__middleLeft {
+        font-size: 20px;
+      }
+      &__middleRight {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  footer {
+    height: inherit;
+    padding: 40px 20px 20px 20px;
+    .header {
+      &__image {
+        width: 9rem;
+      }
+      &__middleLeft,
+      &__middleRight {
+        font-size: 18px;
+      }
+      &__end {
+        width: 2.5rem;
+      }
+    }
+    .linkedin {
+      margin-top: 18px;
+    }
+    .bottom {
+      &__left {
+        font-size: 18px;
+      }
+      &__right {
+        font-size: 18px;
+        width: 330px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer {
+    .header {
+      &__image {
+        width: 7rem;
+      }
+      &__middleLeft,
+      &__middleRight {
+        font-size: 15px;
+      }
+      &__end {
+        width: 1.5rem;
+      }
+    }
+    .linkedin {
+      font-size: 16px;
+    }
+    .bottom {
+      &__left {
+        font-size: 16px;
+      }
+      &__right {
+        font-size: 16px;
+        width: 280px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 2.31rem 1rem;
+    .header {
+      display: block;
+      position: relative;
+      &__image {
+        display: block;
+        width: 10.25006rem;
+        height: 2.0855rem;
+      }
+      &__end {
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 0px;
+        left: 88%;
+      }
+      &__middleLeft,
+      &__middleRight {
+        margin-top: 1.88rem;
+        span {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    .linkedin {
+      text-decoration: underline 1.5px;
+    }
+    .bottom {
+      margin-top: 1.87rem;
+      flex-direction: column;
+      gap: 1rem;
+      &__right {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   }
 }

@@ -6,8 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 
-// const laptopScreen = window.matchMedia("(min-width: 992px)");
-
 export default function animation() {
   animat();
 

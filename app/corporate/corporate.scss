@@ -99,8 +99,7 @@
   &__wrapper {
     margin-top: 3rem;
     display: flex;
-    justify-content: space-between;
-    max-width: 101.125rem;
+    justify-content: space-around;
   }
   &__item {
     width: 28.375rem;
@@ -138,7 +137,7 @@
     display: flex;
     justify-content: space-between;
   }
-  &__left {
+  &__leftside {
     width: 18.25rem;
   }
   &__title {
@@ -146,7 +145,7 @@
     font-size: 24px;
     width: 15.25rem;
   }
-  &__right {
+  &__rightside {
     color: #080708;
     width: 53.625rem;
     font-size: 48px;

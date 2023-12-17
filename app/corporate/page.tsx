@@ -10,19 +10,10 @@ import "./corporate.scss";
 import Link from "next/link";
 
 export default function Corporate() {
-  // const [showText, setShowText] = useState(false);
-  // const her = showText ? (
-  //   <button className="related__right_imageUp">
-  //     <img src="up.svg" alt="up" />
-  //   </button>
-  // ) : (
-  //   <button className="related__right_image">
-  //     <img src="down.svg" alt="down" />
-  //   </button>
-  // );
   useEffect(() => {
     animation();
   }, []);
+
   return (
     <>
       <Header logo={"/Logo.png"} />
@@ -122,11 +113,11 @@ export default function Corporate() {
 
       <section className="whatWeDo">
         <div className="whatWeDo__top">
-          <div className="title whatWeDo__left">
+          <div className="title whatWeDo__leftside">
             <div className="line small" />
             <div className="whatWeDo__title">What we do in structuring</div>
           </div>
-          <div className="whatWeDo__right">
+          <div className="whatWeDo__rightside">
             We represent clients of all sizes, types and industries in every
             aspect of:
           </div>
