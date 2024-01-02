@@ -34,6 +34,7 @@ export default function ContactForm() {
           Please provide a brief description of your business enquiry and we’ll
           do our best to get back to you as soon as possible.
         </div>
+        <div className="contactForm__hr" />
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="formContact">
         <div className="formContact__input">
@@ -131,9 +132,8 @@ export default function ContactForm() {
             )}
           </div>
         </div>
-
-        <button>Send</button>
       </form>
+      <button>Send</button>
     </div>
   );
 }

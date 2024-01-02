@@ -1,17 +1,21 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ContactForm from "../components/contactForm/ContactForm";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
 import "./contactus.scss";
+import "./_media_contactus.scss";
 import animation from "../animations/contactUs";
 
 export default function ContactUs() {
+  const [width768, setWidth768] = useState<number>(0);
+
   useEffect(() => {
-    animation();
-  }, []);
+    setWidth768((width768) => document.documentElement.clientWidth);
+    width768 > 768 ? animation() : null;
+  }, [width768]);
   return (
     <>
       <Header logo={"/mainBus.png"} />
@@ -47,7 +51,10 @@ export default function ContactUs() {
               <span>office@in-business.com</span>
             </div>
             <div className="contactUs__item">
-              <div className="contactUs__item_sub">Address: </div>
+              <div className="contactUs__item_sub" data-last="last">
+                Address:{" "}
+              </div>
+              <div className="contactUs__item_subShot">Addr: </div>
               <span>
                 InBusiness Advisory DMCC Po Box 338425 3910, Platinum Tower,
                 JLT, Dubai, UAE

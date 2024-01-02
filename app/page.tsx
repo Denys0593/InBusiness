@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import "./styles.scss";
+import "./_media_styles.scss";
 
 import animation from "./animation";
 import Header from "./components/header/Header";
@@ -18,9 +19,12 @@ export default function Home() {
   //   x.scrollIntoView({ behavior: "smooth" });
   // };
 
+  const [width768, setWidth768] = useState<number>(0);
+
   useEffect(() => {
-    animation();
-  }, []);
+    setWidth768((width768) => document.documentElement.clientWidth);
+    width768 > 768 ? animation() : null;
+  }, [width768]);
 
   return (
     <main>
@@ -34,7 +38,6 @@ export default function Home() {
       </div>
       <Header logo={"/mainBus.png"} />
       <section className="tailor">
-        <img src="mainBackground.png" alt="dfg" />
         <div className="tailor__subtitle">Best solutions for business</div>
         <h1 className="tailor__title">
           Tailor-Made
@@ -68,9 +71,11 @@ export default function Home() {
       </section>
 
       <section className="whatWeDo">
-        <h2 className="whatWeDo__title">What we do</h2>
-        <div className="whatWeDo__left"></div>
-        <div className="whatWeDo__right"></div>
+        <h2 className="whatWeDo__title">
+          <span>What&nbsp;</span>
+          <span>we&nbsp;</span>
+          <span>do</span>
+        </h2>
         <Card />
       </section>
 
@@ -88,6 +93,13 @@ export default function Home() {
             We provide tailor-made corporate secretarial services, including
             company formation, bank account opening, accounting, taxation,
             immigration support and compliance maintenance solutions
+          </div>
+        </div>
+        <hr className="truly__hr" />
+        <div className="truly__values375">
+          <span>Our values</span>
+          <div className="truly__img">
+            <img src="arrowRight.svg" alt="arrowRight" />
           </div>
         </div>
         <div className="truly__bottomWrapper">

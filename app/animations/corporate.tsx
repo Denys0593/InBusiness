@@ -5,9 +5,14 @@ import animat from "../components/header/animat";
 gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline();
 
+// const laptop1280 = window.matchMedia("(min-width: 1281px)");
+// const laptop1024 = window.matchMedia("(min-width: 1025px)");
 export default function animation() {
   animat();
 
+  gsap.set(".corporateStructuring", {
+    width: "100%",
+  });
   tl.from(".corporateStructuring", {
     width: 0,
     height: 0,
@@ -119,8 +124,8 @@ export default function animation() {
 
   gsap.from(".whatWeDo__leftside", {
     scrollTrigger: {
-      trigger: ".whatWeDo__leftside",
-      start: "top 100",
+      trigger: ".whatWeDo",
+      start: "top center",
       end: "+=300",
       scrub: true,
     },
@@ -131,7 +136,7 @@ export default function animation() {
   gsap.from(".whatWeDo__rightside", {
     scrollTrigger: {
       trigger: ".whatWeDo",
-      start: "top 150",
+      start: "top center",
       end: "+=250",
       scrub: true,
     },
@@ -143,8 +148,8 @@ export default function animation() {
   gsap.from(".whatWeDo__item", {
     scrollTrigger: {
       trigger: ".whatWeDo__item",
-      start: "top 50",
-      end: "+=300",
+      start: "top center",
+      end: "+=350",
       scrub: true,
     },
 
@@ -161,7 +166,7 @@ export default function animation() {
   gsap.from(".related__title", {
     scrollTrigger: {
       trigger: ".related",
-      start: "300px center",
+      start: "100px bottom",
       end: "+=550",
       scrub: true,
     },
@@ -174,7 +179,7 @@ export default function animation() {
   gsap.from(".related__item", {
     scrollTrigger: {
       trigger: ".related",
-      start: "-100px top",
+      start: "center center",
       end: "+=bottom",
     },
     display: "none",
@@ -191,9 +196,10 @@ export default function animation() {
 
   gsap.from(".related__btn > span", {
     scrollTrigger: {
-      trigger: ".beforeFooter",
-      start: "bottom bottom",
-      scrub: true,
+      trigger: ".related__btn",
+      start: "100 bottom",
+      end: "+=300",
+      // scrub: true,
     },
     skewY: "38deg",
     opacity: 0,

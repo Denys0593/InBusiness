@@ -36,9 +36,10 @@ footer {
   &__lines {
     position: relative;
     margin-top: 2.2rem;
+    width: 100%;
   }
   hr {
-    width: 109.125rem;
+    width: 100%;
     background: #808689;
     z-index: 0;
     position: absolute;
@@ -54,13 +55,12 @@ footer {
   &__image {
     img {
       width: 100%;
-      min-width: auto;
+      height: 100%;
     }
   }
   &__descr {
     width: 44.375rem;
     min-width: 20rem;
-    height: 32.125rem;
     align-self: center;
   }
   &__subtitle {
@@ -98,6 +98,11 @@ footer {
     &_sub {
       min-width: 9.625rem;
     }
+    &_subShot {
+      display: none;
+      min-width: 9.625rem;
+      font-size: 1.25rem;
+    }
     span {
       width: 26rem;
       color: #ccc;
@@ -111,6 +116,10 @@ footer {
 .formLine {
   position: absolute;
   top: 14%;
+  width: 100%;
+  hr {
+    width: 100%;
+  }
 }
 
 .contactForm {

@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
+  display: none;
   &__hello {
     position: absolute;
     top: 50%;
@@ -30,23 +30,20 @@
 }
 
 .tailor {
-  height: 67.5rem;
+  // height: 67.5rem;
+  // height: 100vh;
   width: 100%;
-  // padding: 45.438rem 0 0 5.438rem;
+  background: url("../public/mainBackground.png") center center/cover no-repeat;
+  padding: 45.438rem 0 3.3rem 5.438rem;
   position: relative;
-  flex-shrink: 0;
-  top: -5.625rem;
-  img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
+  // top: -5.625rem;
+
   &__subtitle {
     display: inline-block;
     color: #fff;
-    font-size: 20px;
-    margin: 46.06rem 0 0 6.81rem;
-    // margin-left: 1.375rem;
+    font-size: 1.25rem;
+    // margin: 55.06rem 0 0 6.81rem;
+    margin-left: 1.375rem;
     position: relative;
     &:before {
       position: absolute;
@@ -60,9 +57,9 @@
     }
   }
   &__title {
-    margin: 1.875rem 0 0 5.44rem;
+    margin-top: 1.875rem;
     color: #fff;
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 100%;
   }
   &__down {
@@ -71,11 +68,16 @@
     height: 1.25rem;
     margin: 2.938rem auto 0 auto;
     display: block;
+    img {
+      height: auto;
+      min-height: 100%;
+      width: 100%;
+    }
   }
 }
 
 .whoWeAre {
-  padding: 0 5.438rem 6.875rem 5.438rem;
+  padding: 6.875rem 5.438rem;
   // position: relative;
   &__title {
     color: #080708;
@@ -135,19 +137,9 @@
   &__title {
     color: #080708;
     font-size: 56px;
-  }
-  &__left {
-    position: absolute;
-    width: 45.5%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(110, 89, 89));
-  }
-  &__right {
-    position: absolute;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(110, 89, 89));
+    span {
+      display: inline-block;
+    }
   }
 }
 
@@ -189,5 +181,9 @@
   &__image {
     margin: 4.5rem 0 0 35.875rem;
     width: 63.625rem;
+  }
+  &__hr,
+  &__values375 {
+    display: none;
   }
 }

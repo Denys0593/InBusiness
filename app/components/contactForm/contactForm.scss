@@ -21,19 +21,24 @@
     line-height: 130%;
     width: 63.875rem;
     height: 5.75rem;
-    flex-shrink: 0;
   }
+
   hr {
     margin-top: 2.12rem;
     width: 109.125rem;
     height: 0.125rem;
     background: #080708;
   }
+  &__hr {
+    display: none;
+  }
   .formContact {
     margin-top: 7.12rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    position: relative;
     &__input {
       margin-top: 1.5rem;
       display: flex;
@@ -59,7 +64,7 @@
       }
       &:after {
         content: "";
-        width: 108.125rem;
+        width: 100%;
         height: 0.0625rem;
         background: #ababab;
         position: absolute;
@@ -67,9 +72,14 @@
       }
     }
     &__private {
-      margin-left: 46.25rem;
-      margin-top: 3rem;
-
+      // margin-left: 46.25rem;
+      // margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: -20%;
+      width: 48rem;
+      right: 239px;
       input {
         width: 1.5rem;
         height: 1.5rem;
@@ -87,23 +97,139 @@
         text-decoration-line: underline;
       }
     }
-    button {
-      margin-top: 2.5rem;
-      display: flex;
-      width: 62.875rem;
-      height: 4rem;
-      flex-direction: column;
-      justify-content: space-around;
+  }
+  button {
+    margin-top: 7rem;
+    margin-left: auto;
+    display: flex;
+    width: 62.875rem;
+    height: 4rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: end;
+    background: #9ce861;
+    color: #080708;
+    font-family: Faktum Test;
+    font-size: 1.25rem;
+    &:hover {
+      border-radius: 8px;
+      background: hsl(120, 60%, 70%);
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  .contactForm {
+    &__upper {
       align-items: center;
-      align-self: end;
-      background: #9ce861;
-      color: #080708;
-      font-family: Faktum Test;
-      font-size: 1.25rem;
-      &:hover {
-        border-radius: 8px;
-        background: hsl(120, 60%, 70%);
+      width: 100%;
+    }
+    &__text {
+      width: 50rem;
+      height: unset;
+    }
+    .formContact {
+      &__input {
+        &:after {
+          width: 100%;
+        }
       }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .contactForm {
+    &__upper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    .formContact {
+      margin-top: 4.5rem;
+      &__input {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        input {
+          width: 100%;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &__private {
+        width: 100%;
+        bottom: -12%;
+        right: 0px;
+      }
+    }
+    button {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .contactForm {
+    .formContact {
+      &__div {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    margin: 6.87rem 1rem 8.12rem 1rem;
+    &__upper {
+      gap: 1rem;
+    }
+    &__title {
+      width: unset;
+    }
+    &__text {
+      font-size: 1rem;
+      width: unset;
+    }
+    &__hr {
+      display: block;
+      margin-top: 0.5rem;
+      width: 100%;
+      height: 0.0625rem;
+      background: #d3d3d3;
+    }
+    .formContact {
+      margin-top: 0.5rem;
+      &__input {
+        gap: 0.5rem;
+        margin-top: 1rem;
+        label {
+          font-size: 1rem;
+        }
+        input {
+          width: 100%;
+          height: 2.8125rem;
+          border: 1px solid #ababab;
+        }
+      }
+      &__private {
+        bottom: -19%;
+        right: -14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      &__div {
+        margin-left: 0;
+      }
+    }
+    button {
+      margin-top: 5.6rem;
     }
   }
 }

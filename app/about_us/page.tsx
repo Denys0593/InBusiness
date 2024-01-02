@@ -2,7 +2,7 @@
 
 import "./aboutus.scss";
 import "./_media_aboutUs.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import animation from "../animations/aboutUs";
 import Header from "../components/header/Header";
@@ -11,9 +11,12 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export default function AboutUs() {
+  const [width768, setWidth768] = useState<number>(0);
+
   useEffect(() => {
-    animation();
-  }, []);
+    setWidth768((width768) => document.documentElement.clientWidth);
+    width768 > 768 ? animation() : null;
+  }, [width768]);
 
   return (
     <main>

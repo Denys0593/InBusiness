@@ -17,6 +17,7 @@
 }
 
 .corporateStructuring {
+  width: 100%;
   padding: 324px 0 0 87px;
   min-height: 37.5rem;
   background: url("../../public/back_first.png") center center/cover no-repeat;
@@ -46,7 +47,7 @@
 }
 
 .expertise {
-  padding: 170px 238px 170px 87px;
+  padding: 10.625rem 14.875rem 10.625rem 5.438rem;
   display: flex;
   justify-content: space-between;
   &__left {
@@ -85,9 +86,10 @@
 }
 
 .structuringApproach {
-  height: 846px;
+  // height: 846px;
+  height: unset;
   background: #080708;
-  padding: 5rem 9.438rem 8.75rem 5.438rem;
+  padding: 5rem 5.438rem 8.75rem 5.438rem;
   &__title {
     width: 42.688rem;
     color: #fff;
@@ -96,24 +98,34 @@
       display: inline-block;
     }
   }
+  &__mobTitle {
+    display: none;
+  }
   &__wrapper {
     margin-top: 3rem;
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
+    border-top: 1px #323b40 solid;
+    border-bottom: 1px #323b40 solid;
   }
   &__item {
-    width: 28.375rem;
+    width: unset;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
+    &:nth-child(2) {
+      border-right: 1px #323b40 solid;
+      border-left: 1px #323b40 solid;
+    }
     &_title {
       color: #f5f5f5;
       text-align: center;
       font-family: Mukta;
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: 300;
       letter-spacing: 0.32px;
     }
@@ -121,35 +133,40 @@
       color: #808689;
       text-align: center;
       font-family: Mukta;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 300;
       line-height: 140%;
+      margin: 0 1rem;
     }
   }
 }
 
 .whatWeDo {
+  position: relative;
   padding: 9.563rem 5.438rem 9.375rem 5.438rem;
   height: 1088px;
   background: #f5f5f5;
   &__top {
-    max-width: 99.875rem;
+    width: 100%;
+    // max-width: 99.875rem;
     display: flex;
     justify-content: space-between;
   }
   &__leftside {
-    width: 18.25rem;
+    // width: 18.25rem;
+    gap: 1rem;
   }
   &__title {
     color: #080708;
     font-size: 24px;
-    width: 15.25rem;
+    // width: 15.25rem;
   }
   &__rightside {
     color: #080708;
     width: 53.625rem;
     font-size: 48px;
     font-weight: 400;
+    margin-right: 11rem;
   }
   &__wrapper {
     margin-top: 4.375rem;
@@ -171,16 +188,18 @@
     line-height: 150%;
   }
   &__bottom {
-    position: relative;
-    top: 5rem;
-    left: 47.875rem;
-    width: 61.25rem;
+    max-width: 61.25rem;
     height: 5.188rem;
     color: #000;
     font-family: Mukta;
     font-size: 28px;
     font-weight: 300;
     line-height: 140%;
+    position: absolute;
+    bottom: 10%;
+    left: 44%;
+    right: 5rem;
+
     &:before {
       content: "";
       width: 10px;
@@ -242,7 +261,7 @@
   &__item {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(1.438rem, 46rem) minmax(auto, 53.625rem) minmax(
+    grid-template-columns: minmax(1.438rem, auto) minmax(auto, 53.625rem) minmax(
         3rem,
         9.25rem
       );

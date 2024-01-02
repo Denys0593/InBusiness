@@ -7,12 +7,16 @@ import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
 import "./corporate.scss";
+import "./_media_corporate.scss";
 import Link from "next/link";
 
 export default function Corporate() {
+  const [width768, setWidth768] = useState<number>(0);
+
   useEffect(() => {
-    animation();
-  }, []);
+    setWidth768((width768) => document.documentElement.clientWidth);
+    width768 > 768 ? animation() : null;
+  }, [width768]);
 
   return (
     <>
@@ -74,6 +78,9 @@ export default function Corporate() {
           <span data-word="word">c</span>
           <span data-word="word">h</span>
         </h2>
+        <div className="structuringApproach__mobTitle">
+          When advising on corporate structuring, we consider:
+        </div>
         <div className="structuringApproach__wrapper">
           <div className="structuringApproach__item">
             <img src="logo_first.svg" alt="firstLogo" />
@@ -308,7 +315,7 @@ export default function Corporate() {
         <div className="beforeFooter__left">
           Next:&nbsp; <span>Corporate Secretarial Services</span>
         </div>
-        <button className="beforeFooter__left">
+        <button className="beforeFooter__right">
           <img src="right.svg" alt="right" />
         </button>
       </div>

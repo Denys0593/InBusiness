@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import animat from "./components/header/animat";
+import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,47 +10,48 @@ const tl = gsap.timeline();
 const header = gsap.timeline();
 const tlForm = gsap.timeline();
 
-// const laptopScreen = window.matchMedia("(min-width: 992px)");
+// const laptopScreen1024 = window.matchMedia("(min-width: 1024px)");
+// const laptopScreen768 = window.matchMedia("(min-width: 768px)");
 
 export default function animation() {
   animat();
-  tlLoader
-    .to(".loader__item", {
-      css: {
-        marginTop: 0,
-      },
-      duration: 0.4,
-      stagger: 0.25,
-    })
-    .to(".loader__item", {
-      css: {
-        yPercent: -100,
-      },
-      duration: 0.5,
-      stagger: 0.25,
-    })
-    .to(".loader__hello", {
-      opacity: 1,
-      duration: 1,
-      scale: 1.1,
-    })
-    .to(".loader__hello", {
-      opacity: 0,
-      duration: 1,
-      scale: 0.9,
-    })
-    .to(
-      ".loader",
-      {
-        opacity: 0,
-        duration: 0.5,
-      },
-      "-=0.4"
-    )
-    .to(".loader", {
-      visibility: "hidden",
-      display: "none",
-    });
+  // tlLoader
+  //   .to(".loader__item", {
+  //     css: {
+  //       marginTop: 0,
+  //     },
+  //     duration: 0.4,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__item", {
+  //     css: {
+  //       yPercent: -100,
+  //     },
+  //     duration: 0.5,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 1,
+  //     duration: 1,
+  //     scale: 1.1,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     scale: 0.9,
+  //   })
+  //   .to(
+  //     ".loader",
+  //     {
+  //       opacity: 0,
+  //       duration: 0.5,
+  //     },
+  //     "-=0.4"
+  //   )
+  //   .to(".loader", {
+  //     visibility: "hidden",
+  //     display: "none",
+  //   });
 
   tlForm
     .set(".contactForm", {
@@ -69,7 +71,7 @@ export default function animation() {
       scrollTrigger: {
         trigger: ".contactForm",
         start: "top center",
-        end: "+=30%",
+        end: "+=20%",
         scrub: true,
       },
       left: 0,
@@ -79,13 +81,14 @@ export default function animation() {
       scrollTrigger: {
         trigger: ".contactForm",
         start: "top center",
-        end: "+=20%",
+        end: "+=30%",
         scrub: true,
       },
       display: "none",
       xPercent: 100,
       opacity: 0,
     });
+
   tl.set(".tailor", {
     yPercent: -100,
     opacity: 0,
@@ -94,7 +97,7 @@ export default function animation() {
       yPercent: 0,
       duration: 1,
       opacity: 1,
-      delay: 4,
+      // delay: 4,
     })
     .fromTo(
       ".tailor__subtitle",
@@ -141,7 +144,7 @@ export default function animation() {
   gsap.from(".whoWeAre__title", {
     scrollTrigger: {
       trigger: ".whoWeAre",
-      start: "100 bottom",
+      start: "top center",
       end: "+=350px",
       scrub: true,
     },
@@ -169,6 +172,7 @@ export default function animation() {
     },
     x: 200,
     opacity: 0,
+    // display: "none",
   });
   gsap.from("[data-hr='bottom']", {
     scrollTrigger: {
@@ -183,8 +187,8 @@ export default function animation() {
   });
   gsap.from(".whoWeAre__btn", {
     scrollTrigger: {
-      trigger: ".whoWeAre__text",
-      start: "bottom 60%",
+      trigger: ".whoWeAre__btn",
+      start: "bottom 95%",
       end: "+=200px",
       scrub: true,
     },
@@ -192,26 +196,34 @@ export default function animation() {
     y: -60,
   });
 
-  gsap.to(".whatWeDo__left", {
+  gsap.from(".card__item", {
     scrollTrigger: {
       trigger: ".whatWeDo",
-      start: "85% bottom",
+      start: "top center",
     },
-    borderRadius: "0 25% 25% 0",
     opacity: 0,
-    xPercent: 200,
-    display: "none",
-    duration: 2,
+    skewY: "-38deg",
+    scaleX: 3,
+    stagger: {
+      amount: 0.5,
+      from: 3,
+    },
   });
-  gsap.to(".whatWeDo__right", {
+
+  gsap.from(".whatWeDo__title span", {
     scrollTrigger: {
       trigger: ".whatWeDo",
-      start: "85% bottom",
+      start: "200 bottom",
+      end: "+=300",
     },
-    borderRadius: "25% 0 0 25%",
+    skewY: "38deg",
     opacity: 0,
-    xPercent: -200,
-    duration: 2,
+    scaleX: 3,
+    scaleY: 3,
+    stagger: {
+      amount: 0.5,
+      from: 3,
+    },
   });
 
   gsap.from(".truly", {
@@ -224,6 +236,7 @@ export default function animation() {
     borderRadius: "5rem",
     backgroundImage: "linear-gradient(to right, red , yellow)",
   });
+
   gsap.to(".truly__wrapper", {
     scrollTrigger: {
       trigger: ".truly__btn",
