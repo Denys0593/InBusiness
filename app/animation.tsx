@@ -97,7 +97,7 @@ export default function animation() {
       yPercent: 0,
       duration: 1,
       opacity: 1,
-      // delay: 4,
+      delay: 4.2,
     })
     .fromTo(
       ".tailor__subtitle",
