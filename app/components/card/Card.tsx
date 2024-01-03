@@ -23,9 +23,7 @@ export default function Card() {
   return (
     <div className="card">
       <ul onClick={(e) => choose(e)} className="card__list">
-        <li id="xyuok" className="card__item active">
-          Structuring
-        </li>
+        <li className="card__item active">Structuring</li>
         <li className="card__item">Corporate Services</li>
         <li className="card__item">Bank Account Opening</li>
         <li className="card__item">Immigration Service</li>
