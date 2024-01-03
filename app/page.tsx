@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "./styles.scss";
 import "./_media_styles.scss";
 
-import animation from "./animation";
+import { animation, loader } from "./animation";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Link from "next/link";
@@ -20,7 +20,9 @@ export default function Home() {
   // };
 
   const [width768, setWidth768] = useState<number>(0);
-
+  useEffect(() => {
+    loader();
+  }, []);
   useEffect(() => {
     setWidth768((width768) => document.documentElement.clientWidth);
     width768 > 768 ? animation() : null;

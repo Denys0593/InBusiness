@@ -12,21 +12,20 @@ const tlForm = gsap.timeline();
 
 // const laptopScreen1024 = window.matchMedia("(min-width: 1024px)");
 // const laptopScreen768 = window.matchMedia("(min-width: 768px)");
-
-export default function animation() {
-  animat();
+function loader() {
   tlLoader
+    .set(".loader__item", {
+      yPercent: 100,
+      display: "block",
+    })
     .to(".loader__item", {
-      css: {
-        marginTop: 0,
-      },
+      yPercent: 0,
       duration: 0.4,
       stagger: 0.25,
     })
     .to(".loader__item", {
-      css: {
-        yPercent: -100,
-      },
+      yPercent: -100,
+
       duration: 0.5,
       stagger: 0.25,
     })
@@ -52,6 +51,46 @@ export default function animation() {
       visibility: "hidden",
       display: "none",
     });
+}
+function animation() {
+  animat();
+  // tlLoader
+  //   .to(".loader__item", {
+  //     css: {
+  //       marginTop: 0,
+  //     },
+  //     duration: 0.4,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__item", {
+  //     css: {
+  //       yPercent: -100,
+  //     },
+  //     duration: 0.5,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 1,
+  //     duration: 1,
+  //     scale: 1.1,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     scale: 0.9,
+  //   })
+  //   .to(
+  //     ".loader",
+  //     {
+  //       opacity: 0,
+  //       duration: 0.5,
+  //     },
+  //     "-=0.4"
+  //   )
+  //   .to(".loader", {
+  //     visibility: "hidden",
+  //     display: "none",
+  //   });
 
   tlForm
     .set(".contactForm", {
@@ -258,3 +297,5 @@ export default function animation() {
     scale: 1.2,
   });
 }
+
+export { loader, animation };

@@ -4,7 +4,7 @@ export default function Loading() {
       style={{
         display: "flex",
         justifyContent: "center",
-        marginTop: "20rem",
+        marginTop: "40vh",
       }}
     >
       <img src="giphy.gif" alt="loading" />
