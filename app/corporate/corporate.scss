@@ -18,12 +18,15 @@
 
 .corporateStructuring {
   width: 100%;
-  padding: 324px 0 0 87px;
+  // padding: 324px 0 0 87px;
   min-height: 37.5rem;
   background: url("../../public/back_first.png") center center/cover no-repeat;
+  height: 100vh;
+  position: relative;
   &__frame {
-    width: 344px;
-    height: 170px;
+    position: absolute;
+    top: 66%;
+    left: 7%;
   }
   &__home {
     color: #fff;
@@ -117,6 +120,11 @@
     gap: 24px;
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
+    img {
+      &:hover {
+        animation: swing 0.6s ease;
+      }
+    }
     &:nth-child(2) {
       border-right: 1px #323b40 solid;
       border-left: 1px #323b40 solid;
@@ -255,7 +263,7 @@
   &__wrapper {
     margin-top: 5.5rem;
     display: grid;
-    grid-template-rows: repeat(5, minmax(auto, 6.5rem));
+    grid-template-rows: repeat(5, minmax(6.5rem, auto));
     row-gap: 5rem;
   }
   &__item {
@@ -265,19 +273,19 @@
         3rem,
         9.25rem
       );
-    &:nth-last-child(-n + 1) {
-      &:after {
-        width: 100%;
-        bottom: -2.5rem;
+    &:nth-child(1) {
+      &:before {
         content: "";
+        width: 100%;
+        top: -2.5rem;
         height: 1px;
         background: #808689;
         position: absolute;
       }
     }
-    &:before {
+    &:after {
       width: 100%;
-      top: -2.5rem;
+      bottom: -2.5rem;
       content: "";
       height: 1px;
       background: #808689;
@@ -302,14 +310,18 @@
     }
     &_bottom {
       display: none;
-      margin-top: 1.5rem;
-      color: #ccc;
-      font-family: Mukta;
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 160%;
+
       span {
         color: #9ce861;
+      }
+      &_active {
+        display: block;
+        margin-top: 1.5rem;
+        color: #ccc;
+        font-family: Mukta;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 160%;
       }
     }
     &_image,
@@ -339,6 +351,10 @@
     span {
       display: inline-block;
     }
+    &:hover {
+      color: #9ce861;
+      animation: swipeOnce 0.2s;
+    }
   }
 }
 
@@ -350,6 +366,24 @@
   align-items: center;
   flex-shrink: 0;
   background: #080708;
+  cursor: pointer;
+  &:hover {
+    background: rgba(5, 117, 117, 0.7);
+    box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+      1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+      2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+    .beforeFooter__left {
+      color: #000;
+      animation: swipeX 0.2s;
+    }
+    .beforeFooter__right {
+      animation: swipeX 0.2s;
+    }
+  }
+  &:active {
+    background: rgba(5, 117, 117, 0.9);
+  }
   &__left {
     color: #808689;
     font-family: Faktum Test;
@@ -359,5 +393,62 @@
       font-family: Faktum Test;
       font-size: 32px;
     }
+  }
+}
+
+@keyframes swing {
+  15% {
+    transform: translateY(9px);
+  }
+  30% {
+    transform: translateY(-9px);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  65% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swipeOnce {
+  15% {
+    transform: translateY(5px);
+  }
+  35% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swipeX {
+  15% {
+    transform: translateX(5px);
+  }
+  35% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

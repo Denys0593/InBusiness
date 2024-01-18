@@ -69,10 +69,16 @@
 }
 
 @media (max-width: 1024px) {
+  .tailor {
+    &__frame {
+      left: 5%;
+    }
+  }
   .whatWeDo {
     padding: 0 5.438rem 0 5.438rem;
   }
   .truly {
+    padding-bottom: 0;
     &__bottomWrapper {
       display: none;
     }

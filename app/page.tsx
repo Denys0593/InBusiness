@@ -40,12 +40,14 @@ export default function Home() {
       </div>
       <Header logo={"/mainBus.png"} />
       <section className="tailor">
-        <div className="tailor__subtitle">Best solutions for business</div>
-        <h1 className="tailor__title">
-          Tailor-Made
-          <br />
-          Corporate Secretarial Services in Dubai
-        </h1>
+        <div className="tailor__frame">
+          <div className="tailor__subtitle">Best solutions for business</div>
+          <h1 className="tailor__title">
+            Tailor-Made
+            <br />
+            Corporate Secretarial Services in Dubai
+          </h1>
+        </div>
 
         <div className="tailor__down">
           <img src="downMain.svg" alt="downMain" />
@@ -68,16 +70,26 @@ export default function Home() {
         <hr data-hr="bottom" />
         <button className="whoWeAre__btn">
           <div className="whoWeAre__left">Learn more</div>
-          <img src="arrowRight.svg" alt="right" className="whoWeAre__right" />
+          {/* <img src="arrowRight.svg" alt="right" className="whoWeAre__right" /> */}
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M32.871 30.0001L31.8425 31.069L25 37.5619L26.5158 39L36 30.0414L35.9568 30.0001L34.4842 28.603L26.5158 21L25 22.4384L32.871 30.0001Z"
+              fill="#5E5E5E"
+            />
+          </svg>
         </button>
       </section>
 
       <section className="whatWeDo">
-        <h2 className="whatWeDo__title">
-          <span>What&nbsp;</span>
-          <span>we&nbsp;</span>
-          <span>do</span>
-        </h2>
+        <h2 className="whatWeDo__title">What we do</h2>
         <Card />
       </section>
 

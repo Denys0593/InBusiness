@@ -16,13 +16,16 @@
 }
 
 .about {
-  padding: 324px 0 0 87px;
+  // padding: 324px 0 0 87px;
+  height: 100vh;
+  position: relative;
   min-height: 600px;
   background: url("../../public/first_background.png") center center/cover
     no-repeat;
   &__frame {
-    width: 344px;
-    min-height: 170px;
+    position: absolute;
+    top: 66%;
+    left: 7%;
   }
   &__home {
     color: #fff;
@@ -172,9 +175,6 @@
     text-align: center;
     font-size: 64px;
     font-weight: 400;
-    span {
-      display: inline-block;
-    }
   }
   &__wrapper {
     margin-top: 56px;
@@ -256,6 +256,7 @@
     font-weight: 400;
     line-height: 140%;
     position: relative;
+
     &:before {
       content: "";
       width: 1px;
@@ -265,11 +266,33 @@
       top: -100px;
       left: -150%;
     }
-  }
-  [data-shot="her"] {
-    display: block;
-  }
-  [data-shot="him"] {
-    display: block;
+    &:after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #9ce861;
+      position: absolute;
+      top: 50px;
+      left: 0%;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      color: #9ce861;
+      &:after {
+        width: 195px;
+      }
+    }
+    &:active {
+      font-size: 40px;
+      color: #42751bbe;
+      transition: 0.5s;
+      &:after {
+        top: 0;
+        width: 220px;
+        transform: rotate(180deg);
+        background: #42751bbe;
+      }
+    }
   }
 }

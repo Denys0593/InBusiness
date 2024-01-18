@@ -63,8 +63,8 @@
     position: relative;
     color: #f5f5f5;
     &:hover {
-      scale: 1.1;
-      border: none;
+      background: #52a500;
+      border: 1px solid #52a500;
       &:before {
         content: none;
       }

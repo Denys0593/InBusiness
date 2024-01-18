@@ -13,44 +13,43 @@ const tlForm = gsap.timeline();
 // const laptopScreen1024 = window.matchMedia("(min-width: 1024px)");
 // const laptopScreen768 = window.matchMedia("(min-width: 768px)");
 function loader() {
-  tlLoader
-    .set(".loader__item", {
-      yPercent: 100,
-      display: "block",
-    })
-    .to(".loader__item", {
-      yPercent: 0,
-      duration: 0.4,
-      stagger: 0.25,
-    })
-    .to(".loader__item", {
-      yPercent: -100,
-
-      duration: 0.5,
-      stagger: 0.25,
-    })
-    .to(".loader__hello", {
-      opacity: 1,
-      duration: 1,
-      scale: 1.1,
-    })
-    .to(".loader__hello", {
-      opacity: 0,
-      duration: 1,
-      scale: 0.9,
-    })
-    .to(
-      ".loader",
-      {
-        opacity: 0,
-        duration: 0.5,
-      },
-      "-=0.4"
-    )
-    .to(".loader", {
-      visibility: "hidden",
-      display: "none",
-    });
+  // tlLoader
+  //   .set(".loader__item", {
+  //     yPercent: 100,
+  //     display: "block",
+  //   })
+  //   .to(".loader__item", {
+  //     yPercent: 0,
+  //     duration: 0.4,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__item", {
+  //     yPercent: -100,
+  //     duration: 0.5,
+  //     stagger: 0.25,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 1,
+  //     duration: 1,
+  //     scale: 1.1,
+  //   })
+  //   .to(".loader__hello", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     scale: 0.9,
+  //   })
+  //   .to(
+  //     ".loader",
+  //     {
+  //       opacity: 0,
+  //       duration: 0.5,
+  //     },
+  //     "-=0.4"
+  //   )
+  //   .to(".loader", {
+  //     visibility: "hidden",
+  //     display: "none",
+  //   });
 }
 function animation() {
   animat();
@@ -92,41 +91,21 @@ function animation() {
   //     display: "none",
   //   });
 
-  tlForm
-    .set(".contactForm", {
-      left: "-100%",
-      margin: 0,
-    })
-    .set(".contactForm__formik", {
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      backgroundImage:
-        "linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)",
-      zIndex: "55",
-      left: "100%",
-    })
-    .to(".contactForm", {
-      scrollTrigger: {
-        trigger: ".contactForm",
-        start: "top center",
-        end: "+=20%",
-        scrub: true,
-      },
-      left: 0,
-      margin: "6.87rem 5.44rem 8.12rem 5.44rem",
-    })
-    .to(".contactForm__formik", {
-      scrollTrigger: {
-        trigger: ".contactForm",
-        start: "top center",
-        end: "+=30%",
-        scrub: true,
-      },
-      display: "none",
-      xPercent: 100,
-      opacity: 0,
-    });
+  gsap.set(".contactForm", {
+    xPercent: -100,
+    opacity: 0,
+    margin: "6.87rem 0 0 0",
+  });
+  gsap.to(".contactForm", {
+    scrollTrigger: {
+      trigger: ".contactForm",
+      start: "top center",
+    },
+    duration: 1,
+    xPercent: 0,
+    opacity: 1,
+    margin: "6.87rem 5.44rem 8.12rem 5.44rem",
+  });
 
   tl.set(".tailor", {
     yPercent: -100,
@@ -136,7 +115,7 @@ function animation() {
       yPercent: 0,
       duration: 1,
       opacity: 1,
-      delay: 4.2,
+      // delay: 4.2,
     })
     .fromTo(
       ".tailor__subtitle",
@@ -183,54 +162,55 @@ function animation() {
   gsap.from(".whoWeAre__title", {
     scrollTrigger: {
       trigger: ".whoWeAre",
-      start: "top center",
-      end: "+=350px",
-      scrub: true,
+      start: "100 bottom",
+      end: "+=400px",
     },
+    display: "none",
     x: "-150px",
     opacity: 0,
   });
   gsap.from("[data-hr='header']", {
     scrollTrigger: {
       trigger: ".whoWeAre",
-      start: "0 center",
+      start: "400 bottom",
       end: "+=300px",
-      scrub: true,
     },
     height: "15px",
-    xPercent: 110,
+    xPercent: -110,
     background: "#000",
     display: "none",
+    opacity: 0,
   });
   gsap.from(".whoWeAre__text", {
     scrollTrigger: {
       trigger: ".whoWeAre",
       start: "top center",
-      end: "+=200px",
-      scrub: true,
+      end: "+=200",
     },
+    display: "none",
     x: 200,
     opacity: 0,
     // display: "none",
   });
   gsap.from("[data-hr='bottom']", {
     scrollTrigger: {
-      trigger: "[data-hr='bottom']",
-      start: "100 bottom",
+      trigger: ".whoWeAre",
+      start: "0 center",
       end: "+=200px",
-      scrub: true,
     },
     height: "15px",
     xPercent: -110,
     background: "#000",
+    opacity: 0,
+    display: "none",
   });
   gsap.from(".whoWeAre__btn", {
     scrollTrigger: {
-      trigger: ".whoWeAre__btn",
-      start: "bottom 95%",
+      trigger: ".whoWeAre",
+      start: "top 20%",
       end: "+=200px",
-      scrub: true,
     },
+    display: "none",
     opacity: 0,
     y: -60,
   });
@@ -238,63 +218,44 @@ function animation() {
   gsap.from(".card__item", {
     scrollTrigger: {
       trigger: ".whatWeDo",
-      start: "top center",
+      start: "center center",
     },
+    x: 200,
     opacity: 0,
-    skewY: "-38deg",
-    scaleX: 3,
     stagger: {
       amount: 0.5,
-      from: 3,
     },
   });
 
-  gsap.from(".whatWeDo__title span", {
+  gsap.from(".whatWeDo__title", {
     scrollTrigger: {
       trigger: ".whatWeDo",
-      start: "200 bottom",
-      end: "+=300",
+      start: "top top",
+      end: "+=350px",
     },
-    skewY: "38deg",
+    x: "-150px",
     opacity: 0,
-    scaleX: 3,
-    scaleY: 3,
-    stagger: {
-      amount: 0.5,
-      from: 3,
-    },
   });
 
-  gsap.from(".truly", {
+  gsap.from(".truly__title", {
     scrollTrigger: {
       trigger: ".truly",
-      start: "100 bottom",
-      end: "+=40%",
+      start: "top 50%",
+      end: "+=350px",
     },
-    scale: 0.5,
-    borderRadius: "5rem",
-    backgroundImage: "linear-gradient(to right, red , yellow)",
+    display: "none",
+    x: "-150px",
+    opacity: 0,
   });
-
-  gsap.to(".truly__wrapper", {
+  gsap.from(".truly__text", {
     scrollTrigger: {
-      trigger: ".truly__btn",
+      trigger: ".truly",
       start: "top center",
-      end: "+=60%",
-      scrub: true,
+      end: "+=30%",
     },
-    y: -220,
-  });
-  gsap.to(".truly__bottomWrapper", {
-    scrollTrigger: {
-      trigger: ".truly__bottomWrapper",
-      start: "top center",
-      end: "+=60%",
-      scrub: true,
-    },
-    y: -200,
-    x: -200,
-    scale: 1.2,
+    display: "none",
+    x: 200,
+    opacity: 0,
   });
 }
 

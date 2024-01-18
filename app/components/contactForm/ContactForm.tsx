@@ -27,7 +27,6 @@ export default function ContactForm() {
 
   return (
     <div className="contactForm">
-      <div className="contactForm__formik"></div>
       <div className="contactForm__upper">
         <h2 className="contactForm__title">Get in Touch</h2>
         <div className="contactForm__text">

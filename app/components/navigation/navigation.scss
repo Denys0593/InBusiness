@@ -8,10 +8,10 @@
 
   &__aside {
     width: 40.5625rem;
-    height: 100%;
+    height: 100vh;
     background: #f5f5f5;
     margin: 0 0 0 auto;
-    padding: 10.625rem 4.44rem 20.12rem 10rem;
+    padding: 10.625rem 4.44rem 0 10rem;
   }
   &__list {
     display: flex;
@@ -22,9 +22,12 @@
     color: #080708;
     font-size: 3rem;
     line-height: normal;
+    &:hover {
+      color: #52a500;
+    }
   }
   &__arrow {
-    margin-left: 1.5rem;
+    // margin-left: 1.5rem;
     width: 2.5rem;
     height: 2.5rem;
     img {
@@ -36,12 +39,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15.5rem;
+    max-width: 15.5rem;
   }
 
   .services {
     display: none;
-    padding: 0rem 2.5rem;
+    padding: 0 0 0 2.5rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.25rem;
@@ -52,6 +55,9 @@
       line-height: 140%;
       opacity: 0.8;
       cursor: pointer;
+      &:hover {
+        color: #52a500;
+      }
     }
   }
   .flex {
@@ -79,11 +85,38 @@
 @media (max-width: 1600px) {
   .navigation {
     &__aside {
-      padding: 10.625rem 0 20.12rem 0;
+      padding: 10.625rem 2.44rem 20.12rem 4rem;
+      width: 36.5625rem;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .navigation {
+    &__aside {
+      padding: 10.625rem 2.44rem 20.12rem 4rem;
       width: 30.5625rem;
     }
-    &__item {
-      margin: 0 auto;
+  }
+}
+
+@media (max-width: 1280px) {
+  .navigation {
+    &__aside {
+      padding: 10.625rem 2.44rem 20.12rem 4rem;
+      width: 30.5625rem;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .navigation {
+    &__aside {
+      padding: 10.625rem 2.44rem 20.12rem 2rem;
+      width: 22rem;
+    }
+    .services {
+      padding: 0 0 0 1rem;
     }
   }
 }
@@ -93,6 +126,24 @@
     z-index: 2;
     &__aside {
       width: 100%;
+      padding: 6.8rem 2.44rem 20.12rem 2rem;
+    }
+    &__list {
+      align-items: center;
+    }
+    &__item {
+      font-size: 2rem;
+    }
+    .services {
+      &__item {
+        font-size: 1.25rem;
+      }
+    }
+    .flex {
+      align-items: center;
+      padding: 0 0 0 0.91rem;
+      gap: 1rem;
+      margin-top: -1rem;
     }
   }
 }

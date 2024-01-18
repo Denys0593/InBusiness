@@ -55,48 +55,26 @@ export default function animation() {
       "-=.5"
     );
 
-  gsap.to(".whoWeAre", {
+  gsap.from(".whoWeAre__left", {
     scrollTrigger: {
       trigger: ".whoWeAre",
-      start: "center center",
-      scrub: true,
-    },
-    background: "rgba(0, 0, 0, 0.482)",
-  });
-  gsap.to(".whoWeAre__title", {
-    scrollTrigger: {
-      trigger: ".whoWeAre__title",
-      start: "-300 top",
-      scrub: true,
-    },
-    color: "rgb(197, 197, 197)",
-  });
-  gsap.to(".whoWeAre__top", {
-    scrollTrigger: {
-      trigger: ".whoWeAre__top",
-      start: "top 200",
-      scrub: true,
-    },
-    color: "rgb(197, 197, 197)",
-  });
-  gsap.to(".whoWeAre__bottom", {
-    scrollTrigger: {
-      trigger: ".whoWeAre__bottom",
-      start: "top 200",
-      scrub: true,
-    },
-    color: "rgb(197, 197, 197)",
-  });
-
-  gsap.from(".approach__left", {
-    scrollTrigger: {
-      trigger: ".approach",
       start: "100 bottom",
-      end: "+=600px",
-      scrub: true,
     },
+    duration: 1,
+    xPercent: -100,
     opacity: 0,
   });
+  gsap.from(".whoWeAre__right", {
+    scrollTrigger: {
+      trigger: ".whoWeAre",
+      start: "100 bottom",
+    },
+    duration: 1,
+    delay: 0.5,
+    xPercent: -100,
+    opacity: 0,
+  });
+
   gsap.from(".approach__right_top", {
     scrollTrigger: {
       trigger: ".approach",
@@ -119,61 +97,54 @@ export default function animation() {
   gsap.from(".someText", {
     scrollTrigger: {
       trigger: ".someText",
-      start: "40% bottom",
-      end: "+=450px",
-      scrub: true,
+      start: "bottom bottom",
+      end: "+=450",
     },
     scale: 0.5,
     opacity: 0,
     color: "#578493",
   });
 
-  gsap.from(".inAddition__left", {
+  gsap.from(".inAddition__right_top", {
     scrollTrigger: {
       trigger: ".inAddition",
-      start: "-150 50%",
-      end: "+=50%",
+      start: "400 bottom",
+      end: "+=300px",
     },
-    xPercent: -100,
+    y: -120,
     opacity: 0,
-    display: "none",
   });
-
-  gsap.from(".inAddition__right", {
+  gsap.from(".inAddition__descr", {
     scrollTrigger: {
       trigger: ".inAddition",
-      start: "-150 50%",
-      end: "+=50%",
+      start: "600 bottom",
+      end: "+=300px",
     },
-    xPercent: 100,
+    yPercent: -40,
     opacity: 0,
-    display: "none",
   });
 
-  gsap.from("[data-go='go']", {
+  gsap.from(".values__title", {
     scrollTrigger: {
       trigger: ".values",
-      start: "150 bottom",
-      end: "+=50%",
-      scrub: true,
+      start: "100 bottom",
+      // end: '+=150',
+      // scrub: true,
     },
+    duration: 2,
+    ease: "back.out(1.7)",
+    y: -100,
     opacity: 0,
-    yPercent: -200,
-    stagger: {
-      amount: 1.5,
-      from: "center",
-    },
   });
 
   gsap.from(".values__top .values__item", {
     scrollTrigger: {
       trigger: ".values__top",
       start: "150 bottom",
-      end: "+=40%",
-      scrub: true,
+      end: "+=30%",
     },
     display: "none",
-    stagger: 1,
+    stagger: 0.25,
     xPercent: -100,
     opacity: 0,
   });
@@ -182,37 +153,23 @@ export default function animation() {
     scrollTrigger: {
       trigger: ".values__bottom",
       start: "150 bottom",
-      end: "+=50%",
-      scrub: true,
+      end: "+=30%",
     },
     display: "none",
     stagger: 0.25,
-    xPercent: 100,
+    xPercent: -100,
     opacity: 0,
   });
 
-  gsap.from("[data-shot='her']", {
+  gsap.from(".beforeFooter__background > div", {
     scrollTrigger: {
       trigger: ".beforeFooter",
       start: "100 bottom",
-      end: "+=70%",
+      end: "+=60%",
       scrub: true,
     },
     display: "none",
     xPercent: -100,
-    stagger: 0.25,
-    opacity: 0,
-  });
-
-  gsap.from("[data-shot='him']", {
-    scrollTrigger: {
-      trigger: ".beforeFooter",
-      start: "100 bottom",
-      end: "+=70%",
-      scrub: true,
-    },
-    display: "none",
-    xPercent: 100,
     stagger: 0.25,
     opacity: 0,
   });

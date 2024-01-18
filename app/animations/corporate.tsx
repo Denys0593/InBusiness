@@ -10,126 +10,100 @@ const tl = gsap.timeline();
 export default function animation() {
   animat();
 
-  gsap.set(".corporateStructuring", {
-    width: "100%",
-  });
   tl.from(".corporateStructuring", {
-    width: 0,
-    height: 0,
-    duration: 2,
-    scale: 0.4,
-    borderRadius: "100%",
-    marginLeft: "50%",
+    opacity: 0,
+    duration: 1,
   })
-    .from(
+    .fromTo(
       ".corporateStructuring__home",
+      {
+        x: -100,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+      }
+    )
+    .fromTo(
+      ".corporateStructuring__title",
       {
         x: 100,
         opacity: 0,
-        duration: 2,
-        ease: "power2.inOut",
+        color: "#000",
       },
-      "-=1.5"
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        color: "#fff",
+      }
     )
-    .from(".corporateStructuring__title", {
-      y: -100,
-      opacity: 0,
-      duration: 1,
-      ease: "bounce.out",
-    })
-    .from(
+    .fromTo(
       ".header__line",
       {
-        y: -100,
+        width: 0,
         opacity: 0,
-        duration: 1,
-        ease: "bounce.out",
+        background: "#243617",
       },
-      "-=0.5"
+      {
+        opacity: 1,
+        width: 64,
+        background: "#9ce861",
+        duration: 1,
+      },
+      "-=.5"
     );
 
-  gsap.set(".expertise", {
-    background: "#000",
-  });
-  gsap.to(".expertise", {
+  gsap.from(".expertise__left", {
     scrollTrigger: {
       trigger: ".expertise",
-      start: "-100 center",
-      end: "+=300",
-      scrub: true,
+      start: "100 bottom",
     },
-    background: "#fff",
-    padding: "170px 238px 170px 87px",
-    display: "flex",
-    justifyContent: "space-between",
+    duration: 1,
+    xPercent: -100,
+    opacity: 0,
   });
-  gsap.set(".line.small", {
-    display: "none",
-  });
-  gsap.to(".line.small", {
+  gsap.from(".expertise__right", {
     scrollTrigger: {
       trigger: ".expertise",
-      start: "-100 center",
-      end: "+=300",
-      scrub: true,
+      start: "100 bottom",
     },
-    display: "block",
+    duration: 1,
+    delay: 0.5,
+    xPercent: -100,
+    opacity: 0,
   });
 
-  gsap.from(".structuringApproach", {
+  gsap.from(".structuringApproach__title", {
     scrollTrigger: {
       trigger: ".structuringApproach",
-      start: "180 bottom",
-      end: "+=400",
-      scrub: true,
+      start: "200 bottom",
     },
-    height: 0,
-  });
-  gsap.from('[data-word="word"]', {
-    scrollTrigger: {
-      trigger: ".structuringApproach",
-      start: "300 bottom",
-      end: "+=500",
-      scrub: true,
-    },
-    opacity: 0.5,
-    yPercent: -200,
+    opacity: 0,
     x: -200,
-    stagger: {
-      amount: 1.5,
-      from: 11,
-    },
+    duration: 1,
   });
 
   gsap.from(".structuringApproach__item", {
     scrollTrigger: {
       trigger: ".structuringApproach",
       start: "300 bottom",
-      end: "+=400",
-      scrub: true,
     },
-    yPercent: -100,
+    duration: 1,
+    scale: 0,
     opacity: 0,
-  });
-  gsap.to(".structuringApproach__item img", {
-    scrollTrigger: {
-      trigger: ".structuringApproach__item",
-      start: "top 85%",
-      scrub: true,
-    },
-    rotate: 360,
-    repeatDelay: 0,
-    repeat: -1,
+    stagger: 0.25,
   });
 
   gsap.from(".whatWeDo__leftside", {
     scrollTrigger: {
       trigger: ".whatWeDo",
       start: "top center",
-      end: "+=300",
-      scrub: true,
     },
-    scale: 1.8,
+    duration: 1,
+    xPercent: -100,
     opacity: 0,
   });
 
@@ -137,61 +111,67 @@ export default function animation() {
     scrollTrigger: {
       trigger: ".whatWeDo",
       start: "top center",
-      end: "+=250",
-      scrub: true,
     },
+    duration: 1,
+    delay: 0.5,
     xPercent: -100,
     opacity: 0,
-    scale: 0.5,
   });
 
   gsap.from(".whatWeDo__item", {
     scrollTrigger: {
-      trigger: ".whatWeDo__item",
-      start: "top center",
-      end: "+=350",
-      scrub: true,
+      trigger: ".whatWeDo",
+      start: "center bottom",
     },
-
-    ease: "bounce.inOut",
-    stagger: {
-      from: "center",
-      amount: 0.5,
-    },
+    duration: 0.25,
+    ease: "CustomEase",
+    stagger: 0.5,
     yPercent: 100,
     opacity: 0,
     background: "#000",
   });
 
+  gsap.from(".strategic__right_top", {
+    scrollTrigger: {
+      trigger: ".strategic",
+      start: "400 bottom",
+      end: "+=300px",
+    },
+    y: -120,
+    opacity: 0,
+  });
+
+  gsap.from(".strategic__descr", {
+    scrollTrigger: {
+      trigger: ".strategic",
+      start: "600 bottom",
+      end: "+=300px",
+    },
+    yPercent: -40,
+    opacity: 0,
+  });
+
   gsap.from(".related__title", {
     scrollTrigger: {
       trigger: ".related",
-      start: "100px bottom",
-      end: "+=550",
-      scrub: true,
+      start: "200 bottom",
     },
+    duration: 1,
     display: "none",
     opacity: 0,
-    skewY: "38deg",
-    scaleX: 3,
-    scaleY: 3,
+    xPercent: -100,
   });
   gsap.from(".related__item", {
     scrollTrigger: {
       trigger: ".related",
-      start: "center center",
-      end: "+=bottom",
+      start: "350 bottom",
     },
+    duration: 1,
     display: "none",
-    xPercent: 100,
-    yPercent: -100,
+    xPercent: -100,
     opacity: 0,
-    scaleX: 3,
-    scaleY: 3,
     background: "#fff",
-    stagger: {
-      amount: 1,
-    },
+    stagger: 0.25,
   });
 
   gsap.from(".related__btn > span", {
@@ -211,8 +191,6 @@ export default function animation() {
       from: 3,
     },
   });
-
-  // Запитати в Юри про херню з стартом
 }
 
 // По кліку запуск анімашки. Вивчити пізніше

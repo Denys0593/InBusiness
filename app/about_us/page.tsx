@@ -106,17 +106,7 @@ export default function AboutUs() {
       </section>
 
       <section className="values">
-        <div className="values__title">
-          <span data-go="go">O</span>
-          <span data-go="go">u</span>
-          <span data-go="go">r&nbsp;</span>
-          <span data-go="go">v</span>
-          <span data-go="go">a</span>
-          <span data-go="go">l</span>
-          <span data-go="go">u</span>
-          <span data-go="go">e</span>
-          <span data-go="go">s</span>
-        </div>
+        <div className="values__title">Our values</div>
         <div className="values__wrapper">
           <div className="values__top">
             <div className="values__item">
@@ -199,17 +189,11 @@ export default function AboutUs() {
 
       <div className="beforeFooter">
         <div className="beforeFooter__background">
-          <div data-shot="her">If you are an individual entrepreneur or an</div>
-          <div data-shot="him">
-            international business in need of professional
-          </div>
-          <div data-shot="her">
-            corporate services with linkage to local expertise,
-          </div>
-          <div data-shot="him">
-            please do not hesitate to contact us for more
-          </div>
-          <div data-shot="her">information on how we can assist you.</div>
+          <div>If you are an individual entrepreneur or an</div>
+          <div>international business in need of professional</div>
+          <div>corporate services with linkage to local expertise,</div>
+          <div>please do not hesitate to contact us for more</div>
+          <div>information on how we can assist you.</div>
         </div>
         <div className="beforeFooter__bottom">
           <div className="beforeFooter__left">

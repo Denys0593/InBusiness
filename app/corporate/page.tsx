@@ -9,9 +9,11 @@ import Header from "../components/header/Header";
 import "./corporate.scss";
 import "./_media_corporate.scss";
 import Link from "next/link";
+import Faq from "../components/faq/Faq";
 
 export default function Corporate() {
   const [width768, setWidth768] = useState<number>(0);
+  const [open, setOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setWidth768((width768) => document.documentElement.clientWidth);
@@ -57,27 +59,7 @@ export default function Corporate() {
       </section>
 
       <section className="structuringApproach">
-        <h2 className="structuringApproach__title">
-          <span data-word="word">S</span>
-          <span data-word="word">t</span>
-          <span data-word="word">r</span>
-          <span data-word="word">u</span>
-          <span data-word="word">c</span>
-          <span data-word="word">t</span>
-          <span data-word="word">u</span>
-          <span data-word="word">r</span>
-          <span data-word="word">i</span>
-          <span data-word="word">n</span>
-          <span data-word="word">g&nbsp;</span>
-          <span data-word="word">A</span>
-          <span data-word="word">p</span>
-          <span data-word="word">p</span>
-          <span data-word="word">r</span>
-          <span data-word="word">o</span>
-          <span data-word="word">a</span>
-          <span data-word="word">c</span>
-          <span data-word="word">h</span>
-        </h2>
+        <h2 className="structuringApproach__title">Structuring Approach</h2>
         <div className="structuringApproach__mobTitle">
           When advising on corporate structuring, we consider:
         </div>
@@ -168,136 +150,11 @@ export default function Corporate() {
       <section className="related">
         <h2 className="related__title">Related FAQs</h2>
         <ul className="related__wrapper">
-          <li className="related__item">
-            <div className="related__left">01</div>
-            <div className="related__right">
-              <h3 className="related__right_title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                et faucibus quam?{" "}
-              </h3>
-              <div className="related__right_bottom">
-                Aliquam sodales, tellus at consequat malesuada, neque dolor
-                auctor sapien, eget vehicula quam diam at est. Donec quis dui
-                quis magna dictum hendrerit. Suspendisse porttitor lacinia
-                scelerisque. In ullamcorper convallis arcu, id rhoncus est
-                sodales id. Maecenas ultrices neque in neque viverra, non
-                lobortis velit vestibulum. Etiam auctor laoreet libero quis
-                aliquet. Nulla lacinia augue et velit gravida, in tempor purus
-                rutrum. To know more details see{" "}
-                <span>Our Client Handbook.</span>
-              </div>
-            </div>
-            <button className="related__right_imageUp">
-              <img src="up.svg" alt="up" />
-            </button>
-            <button className="related__right_image">
-              <img src="down.svg" alt="down" />
-            </button>
-          </li>
-          <li className="related__item">
-            <div className="related__left">02</div>
-            <div className="related__right">
-              <h3 className="related__right_title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                et faucibus quam?{" "}
-              </h3>
-              <div className="related__right_bottom">
-                Aliquam sodales, tellus at consequat malesuada, neque dolor
-                auctor sapien, eget vehicula quam diam at est. Donec quis dui
-                quis magna dictum hendrerit. Suspendisse porttitor lacinia
-                scelerisque. In ullamcorper convallis arcu, id rhoncus est
-                sodales id. Maecenas ultrices neque in neque viverra, non
-                lobortis velit vestibulum. Etiam auctor laoreet libero quis
-                aliquet. Nulla lacinia augue et velit gravida, in tempor purus
-                rutrum. To know more details see{" "}
-                <span>Our Client Handbook.</span>
-              </div>
-            </div>
-            <button className="related__right_imageUp">
-              <img src="up.svg" alt="up" />
-            </button>
-            <button className="related__right_image">
-              <img src="down.svg" alt="down" />
-            </button>
-          </li>
-          <li className="related__item">
-            <div className="related__left">03</div>
-            <div className="related__right">
-              <h3 className="related__right_title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                et faucibus quam?{" "}
-              </h3>
-              <div className="related__right_bottom">
-                Aliquam sodales, tellus at consequat malesuada, neque dolor
-                auctor sapien, eget vehicula quam diam at est. Donec quis dui
-                quis magna dictum hendrerit. Suspendisse porttitor lacinia
-                scelerisque. In ullamcorper convallis arcu, id rhoncus est
-                sodales id. Maecenas ultrices neque in neque viverra, non
-                lobortis velit vestibulum. Etiam auctor laoreet libero quis
-                aliquet. Nulla lacinia augue et velit gravida, in tempor purus
-                rutrum. To know more details see{" "}
-                <span>Our Client Handbook.</span>
-              </div>
-            </div>
-            <button className="related__right_imageUp">
-              <img src="up.svg" alt="up" />
-            </button>
-            <button className="related__right_image">
-              <img src="down.svg" alt="down" />
-            </button>
-          </li>
-          <li className="related__item">
-            <div className="related__left">04</div>
-            <div className="related__right">
-              <h3 className="related__right_title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                et faucibus quam?{" "}
-              </h3>
-              <div className="related__right_bottom">
-                Aliquam sodales, tellus at consequat malesuada, neque dolor
-                auctor sapien, eget vehicula quam diam at est. Donec quis dui
-                quis magna dictum hendrerit. Suspendisse porttitor lacinia
-                scelerisque. In ullamcorper convallis arcu, id rhoncus est
-                sodales id. Maecenas ultrices neque in neque viverra, non
-                lobortis velit vestibulum. Etiam auctor laoreet libero quis
-                aliquet. Nulla lacinia augue et velit gravida, in tempor purus
-                rutrum. To know more details see{" "}
-                <span>Our Client Handbook.</span>
-              </div>
-            </div>
-            <button className="related__right_imageUp">
-              <img src="up.svg" alt="up" />
-            </button>
-            <button className="related__right_image">
-              <img src="down.svg" alt="down" />
-            </button>
-          </li>
-          <li className="related__item">
-            <div className="related__left">05</div>
-            <div className="related__right">
-              <h3 className="related__right_title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                et faucibus quam?{" "}
-              </h3>
-              <div className="related__right_bottom">
-                Aliquam sodales, tellus at consequat malesuada, neque dolor
-                auctor sapien, eget vehicula quam diam at est. Donec quis dui
-                quis magna dictum hendrerit. Suspendisse porttitor lacinia
-                scelerisque. In ullamcorper convallis arcu, id rhoncus est
-                sodales id. Maecenas ultrices neque in neque viverra, non
-                lobortis velit vestibulum. Etiam auctor laoreet libero quis
-                aliquet. Nulla lacinia augue et velit gravida, in tempor purus
-                rutrum. To know more details see{" "}
-                <span>Our Client Handbook.</span>
-              </div>
-            </div>
-            <button className="related__right_imageUp">
-              <img src="up.svg" alt="up" />
-            </button>
-            <button className="related__right_image">
-              <img src="down.svg" alt="down" />
-            </button>
-          </li>
+          <Faq number={"01"} />
+          <Faq number={"02"} />
+          <Faq number={"03"} />
+          <Faq number={"04"} />
+          <Faq number={"05"} />
         </ul>
         <button className="related__btn">
           <span>S</span>

@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
+  display: none;
   &__hello {
     position: absolute;
     top: 50%;
@@ -30,21 +30,23 @@
 }
 
 .tailor {
-  // height: 67.5rem;
-  // height: 100vh;
-  width: 100%;
+  height: 100vh;
+  min-height: 800px;
   background: url("../public/mainBackground.png") center center/cover no-repeat;
-  padding: 45.438rem 0 3.3rem 5.438rem;
   position: relative;
-  // top: -5.625rem;
-
+  &__frame {
+    position: absolute;
+    bottom: 15%;
+    left: 7%;
+  }
   &__subtitle {
     display: inline-block;
     color: #fff;
     font-size: 1.25rem;
-    // margin: 55.06rem 0 0 6.81rem;
-    margin-left: 1.375rem;
-    position: relative;
+    margin-left: 1.25rem;
+    // bottom: 32%;
+    // left: 7%;
+    // position: absolute;
     &:before {
       position: absolute;
       content: "";
@@ -57,16 +59,21 @@
     }
   }
   &__title {
-    margin-top: 1.875rem;
+    // position: absolute;
+    // bottom: 10%;
+    // left: 6%;
     color: #fff;
     font-size: 5rem;
     line-height: 100%;
+    margin-top: 1.87rem;
   }
   &__down {
     cursor: pointer;
     width: 1.375rem;
     height: 1.25rem;
-    margin: 2.938rem auto 0 auto;
+    position: absolute;
+    bottom: 6%;
+    left: 51%;
     display: block;
     img {
       height: auto;
@@ -85,13 +92,11 @@
   }
   [data-hr="header"] {
     margin-top: 2.25rem;
-    // height: 1px;
     background: #d3d3d3;
   }
   [data-hr="bottom"] {
-    width: 1299px;
     background: #d3d3d3;
-    margin: 2.25rem 9.25rem 0 27.937rem;
+    margin: 2.25rem 0 0 27.937rem;
   }
   &__text {
     display: inline-block;
@@ -101,6 +106,7 @@
     font-size: 32px;
     font-weight: 300;
   }
+
   &__btn {
     margin: 2.25rem 0 0 27.937rem;
     display: inline-flex;
@@ -113,13 +119,7 @@
     font-family: Faktum Test;
     font-size: 20px;
     position: relative;
-    &:hover {
-      scale: 1.1;
-      border: none;
-      &:before {
-        content: none;
-      }
-    }
+
     &:before {
       content: "";
       height: 3.75rem;
@@ -127,6 +127,17 @@
       position: absolute;
       background: #000;
       right: 58px;
+    }
+    &:hover {
+      background: #52a500;
+      color: #fff;
+      border: 1px solid #52a500;
+      svg path {
+        fill: #fff;
+      }
+      &:before {
+        display: none;
+      }
     }
   }
 }
@@ -153,7 +164,7 @@
     margin-top: 2.25rem;
   }
   [data-hr="small"] {
-    margin: 3.38rem 0 0 35.875rem;
+    margin: 3.38rem 9.25rem 0 17.937rem;
     width: 62.875rem;
   }
   &__text {
@@ -166,7 +177,7 @@
     line-height: 150%;
   }
   &__btn {
-    margin: 1.5rem 0 0 35.875rem;
+    margin: 1.5rem 9.25rem 0 17.937rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -179,7 +190,7 @@
     }
   }
   &__image {
-    margin: 4.5rem 0 0 35.875rem;
+    margin: 4.5rem 9.25rem 0 17.937rem;
     width: 63.625rem;
   }
   &__hr,
