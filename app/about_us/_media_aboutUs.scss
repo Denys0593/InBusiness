@@ -56,6 +56,9 @@
   .approach {
     min-height: 600px;
     grid-template-columns: minmax(20rem, 49.8125rem) minmax(auto, 1106px);
+    &__left {
+      height: 100%;
+    }
     &__right {
       padding: 5.13rem 10.875rem 5.12rem 7.563rem;
     }
@@ -337,9 +340,6 @@
       &_top {
         width: 12.813rem;
       }
-    }
-    &_left {
-      width: 100%;
     }
   }
   .someText {
