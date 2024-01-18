@@ -92,9 +92,6 @@
   &__left {
     max-width: 797px;
   }
-  // img {
-  //   height: 100%;
-  // }
   &__right {
     padding: 195px 235px 195px 178px;
     background: #080708;
@@ -266,33 +263,12 @@
       top: -100px;
       left: -150%;
     }
-    &:after {
-      content: "";
-      width: 0;
-      height: 2px;
-      background: #9ce861;
-      position: absolute;
-      top: 50px;
-      left: 0%;
-      transition: 0.5s;
-    }
-
     &:hover {
       color: #9ce861;
-      &:after {
-        width: 195px;
-      }
     }
     &:active {
-      font-size: 40px;
       color: #42751bbe;
       transition: 0.5s;
-      &:after {
-        top: 0;
-        width: 220px;
-        transform: rotate(180deg);
-        background: #42751bbe;
-      }
     }
   }
 }
