@@ -91,6 +91,10 @@
   grid-template-columns: minmax(797px, auto) minmax(1106px, auto);
   &__left {
     max-width: 797px;
+    width: 100%;
+    img {
+      height: 100%;
+    }
   }
   &__right {
     padding: 195px 235px 195px 178px;

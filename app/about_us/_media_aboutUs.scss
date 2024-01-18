@@ -336,6 +336,12 @@
     &__title {
       font-size: 1.25rem;
     }
+    &__left {
+      width: unset;
+      img {
+        height: unset;
+      }
+    }
     &__right {
       &_top {
         width: 12.813rem;
@@ -351,6 +357,12 @@
     grid-template-columns: none;
     &__right {
       padding: 3rem 1rem;
+    }
+    &__left {
+      width: unset;
+      img {
+        height: unset;
+      }
     }
     &__descr {
       font-size: 1.25rem;
