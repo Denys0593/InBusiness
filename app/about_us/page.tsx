@@ -199,7 +199,9 @@ export default function AboutUs() {
           <div className="beforeFooter__left">
             Let’s make something remarkable, together.
           </div>
-          <button className="beforeFooter__right">Contact Us</button>
+          <Link href="/contact_us" className="beforeFooter__right">
+            Contact Us
+          </Link>
         </div>
       </div>
 
