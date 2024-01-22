@@ -8,6 +8,7 @@ import Header from "../components/header/Header";
 import "./contactus.scss";
 import "./_media_contactus.scss";
 import animation from "../animations/contactUs";
+import Link from "next/link";
 
 export default function ContactUs() {
   const [width768, setWidth768] = useState<number>(0);
@@ -21,7 +22,8 @@ export default function ContactUs() {
       <Header logo={"/mainBus.png"} />
       <section className="contactUs">
         <div className="contactUs__home">
-          Home &gt; Services &gt; Immigration Service &gt;
+          <Link href="/">Home</Link> &gt; <Link href="#">Services</Link> &gt;{" "}
+          <Link href="#">Immigration Service</Link> &gt;
           <span> Contact</span>
         </div>
         <h1 className="contactUs__title">Contact Us</h1>

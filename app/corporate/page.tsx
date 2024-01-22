@@ -27,7 +27,7 @@ export default function Corporate() {
       <section className="corporateStructuring">
         <div className="corporateStructuring__frame">
           <div className="corporateStructuring__home">
-            Home &gt; Services &gt;
+            <Link href="/">Home</Link> &gt; <Link href="#">Services</Link> &gt;
             <span> Corporate Structuring</span>
           </div>
           <h1 className="corporateStructuring__title">Corporate Structuring</h1>

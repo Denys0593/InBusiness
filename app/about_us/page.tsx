@@ -24,7 +24,7 @@ export default function AboutUs() {
       <section className="about">
         <div className="about__frame">
           <div className="about__home">
-            Home &gt;
+            <Link href="/">Home</Link> &gt;
             <span> About Us</span>
           </div>
           <h1 className="about__title">About Us</h1>
