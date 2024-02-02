@@ -1,3 +1,5 @@
+"use client";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import animat from "./components/header/animat";
@@ -9,8 +11,6 @@ const tlLoader = gsap.timeline();
 const tl = gsap.timeline();
 const header = gsap.timeline();
 const tlForm = gsap.timeline();
-
-const laptopScreen768 = window.matchMedia("(min-width: 768px)");
 
 function loader() {
   tlLoader
@@ -90,23 +90,25 @@ function animation() {
   //     visibility: "hidden",
   //     display: "none",
   //   });
-
-  if (laptopScreen768.matches) {
-    gsap.set(".contactForm", {
-      xPercent: -100,
-      opacity: 0,
-      margin: "6.87rem 0 0 0",
-    });
-    gsap.to(".contactForm", {
-      scrollTrigger: {
-        trigger: ".contactForm",
-        start: "top center",
-      },
-      duration: 1,
-      xPercent: 0,
-      opacity: 1,
-      margin: "6.87rem 5.44rem 8.12rem 5.44rem",
-    });
+  if (typeof window !== "undefined") {
+    const laptopScreen768 = window.matchMedia("(min-width: 768px)");
+    if (laptopScreen768.matches) {
+      gsap.set(".contactForm", {
+        xPercent: -100,
+        opacity: 0,
+        margin: "6.87rem 0 0 0",
+      });
+      gsap.to(".contactForm", {
+        scrollTrigger: {
+          trigger: ".contactForm",
+          start: "top center",
+        },
+        duration: 1,
+        xPercent: 0,
+        opacity: 1,
+        margin: "6.87rem 5.44rem 8.12rem 5.44rem",
+      });
+    }
   }
 
   tl.from(
