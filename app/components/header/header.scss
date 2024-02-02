@@ -7,11 +7,17 @@ header {
   justify-content: space-between;
   position: fixed;
   z-index: 9;
+  transition: all 0.8s;
 }
 
 .white {
+  background: #f5f5f5;
+  // animation: show 1s;
+}
+
+.black {
   background: #080708;
-  // animation: show 0.9s;
+  // animation: showOn 1s;
 }
 
 .linkBlack {
@@ -37,23 +43,44 @@ header {
   top: -16px;
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes showOn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .active-enter {
   opacity: 0;
 }
 .active-enter-active {
   opacity: 1;
-  transition: all 1000ms;
+  transition: all 3000ms;
 }
 .active-enter-done {
   opacity: 1;
-  transition: all 1000ms;
 }
 .active-exit {
   opacity: 1;
 }
 .active-exit-active {
   opacity: 0;
-  transition: all 1000ms;
+  transition: all 3000ms;
 }
 
 @media (max-width: 1280px) {

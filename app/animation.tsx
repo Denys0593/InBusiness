@@ -10,46 +10,46 @@ const tl = gsap.timeline();
 const header = gsap.timeline();
 const tlForm = gsap.timeline();
 
-// const laptopScreen1024 = window.matchMedia("(min-width: 1024px)");
-// const laptopScreen768 = window.matchMedia("(min-width: 768px)");
+const laptopScreen768 = window.matchMedia("(min-width: 768px)");
+
 function loader() {
-  // tlLoader
-  //   .set(".loader__item", {
-  //     yPercent: 100,
-  //     display: "block",
-  //   })
-  //   .to(".loader__item", {
-  //     yPercent: 0,
-  //     duration: 0.4,
-  //     stagger: 0.25,
-  //   })
-  //   .to(".loader__item", {
-  //     yPercent: -100,
-  //     duration: 0.5,
-  //     stagger: 0.25,
-  //   })
-  //   .to(".loader__hello", {
-  //     opacity: 1,
-  //     duration: 1,
-  //     scale: 1.1,
-  //   })
-  //   .to(".loader__hello", {
-  //     opacity: 0,
-  //     duration: 1,
-  //     scale: 0.9,
-  //   })
-  //   .to(
-  //     ".loader",
-  //     {
-  //       opacity: 0,
-  //       duration: 0.5,
-  //     },
-  //     "-=0.4"
-  //   )
-  //   .to(".loader", {
-  //     visibility: "hidden",
-  //     display: "none",
-  //   });
+  tlLoader
+    .set(".loader__item", {
+      yPercent: 100,
+      display: "block",
+    })
+    .to(".loader__item", {
+      yPercent: 0,
+      duration: 0.4,
+      stagger: 0.25,
+    })
+    .to(".loader__item", {
+      yPercent: -100,
+      duration: 0.5,
+      stagger: 0.25,
+    })
+    .to(".loader__hello", {
+      opacity: 1,
+      duration: 1,
+      scale: 1.1,
+    })
+    .to(".loader__hello", {
+      opacity: 0,
+      duration: 1,
+      scale: 0.9,
+    })
+    .to(
+      ".loader",
+      {
+        opacity: 0,
+        duration: 0.5,
+      },
+      "-=0.4"
+    )
+    .to(".loader", {
+      visibility: "hidden",
+      display: "none",
+    });
 }
 function animation() {
   animat();
@@ -91,62 +91,60 @@ function animation() {
   //     display: "none",
   //   });
 
-  gsap.set(".contactForm", {
-    xPercent: -100,
-    opacity: 0,
-    margin: "6.87rem 0 0 0",
-  });
-  gsap.to(".contactForm", {
-    scrollTrigger: {
-      trigger: ".contactForm",
-      start: "top center",
-    },
-    duration: 1,
-    xPercent: 0,
-    opacity: 1,
-    margin: "6.87rem 5.44rem 8.12rem 5.44rem",
-  });
-
-  tl.set(".tailor", {
-    yPercent: -100,
-    opacity: 0,
-  })
-    .to(".tailor", {
-      yPercent: 0,
+  if (laptopScreen768.matches) {
+    gsap.set(".contactForm", {
+      xPercent: -100,
+      opacity: 0,
+      margin: "6.87rem 0 0 0",
+    });
+    gsap.to(".contactForm", {
+      scrollTrigger: {
+        trigger: ".contactForm",
+        start: "top center",
+      },
       duration: 1,
+      xPercent: 0,
       opacity: 1,
-      // delay: 4.2,
-    })
+      margin: "6.87rem 5.44rem 8.12rem 5.44rem",
+    });
+  }
+
+  tl.from(
+    ".tailor",
+    {
+      yPercent: -100,
+      opacity: 0,
+      duration: 1,
+    },
+    4
+  )
     .fromTo(
       ".tailor__subtitle",
       {
-        y: -100,
+        x: -100,
         opacity: 0,
-        scaleY: -1,
-        color: "#000",
       },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
-        scaleY: 1,
-        duration: 2,
-        color: "#fff",
-      }
+        duration: 1,
+      },
+      5
     )
     .fromTo(
       ".tailor__title",
       {
-        y: 100,
+        x: 100,
         opacity: 0,
         color: "#000",
       },
       {
-        y: 0,
+        x: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         color: "#fff",
       },
-      "-=1.5"
+      6
     );
   gsap.from(".tailor__down", {
     scrollTrigger: {
@@ -234,27 +232,6 @@ function animation() {
       end: "+=350px",
     },
     x: "-150px",
-    opacity: 0,
-  });
-
-  gsap.from(".truly__title", {
-    scrollTrigger: {
-      trigger: ".truly",
-      start: "top 50%",
-      end: "+=350px",
-    },
-    display: "none",
-    x: "-150px",
-    opacity: 0,
-  });
-  gsap.from(".truly__text", {
-    scrollTrigger: {
-      trigger: ".truly",
-      start: "top center",
-      end: "+=30%",
-    },
-    display: "none",
-    x: 200,
     opacity: 0,
   });
 }

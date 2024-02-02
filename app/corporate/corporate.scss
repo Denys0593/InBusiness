@@ -358,7 +358,7 @@
   }
 }
 
-.beforeFooter {
+.beforeFooterCorp {
   display: flex;
   height: 180px;
   padding: 0px 87px;
@@ -373,11 +373,11 @@
       1px 2px 4px 0px rgba(0, 255, 255, 0.7),
       2px 4px 8px 0px rgba(0, 255, 255, 0.7),
       2px 4px 16px 0px rgba(0, 255, 255, 0.7);
-    .beforeFooter__left {
+    .beforeFooterCorp__left {
       color: #000;
       animation: swipeX 0.2s;
     }
-    .beforeFooter__right {
+    .beforeFooterCorp__right {
       animation: swipeX 0.2s;
     }
   }

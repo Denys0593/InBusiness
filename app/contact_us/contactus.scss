@@ -1,10 +1,3 @@
-.line {
-  width: 64px;
-  height: 4px;
-  background-color: #9ce861;
-  position: absolute;
-  z-index: 1;
-}
 footer {
   position: relative;
 }
@@ -37,6 +30,14 @@ footer {
     position: relative;
     margin-top: 2.2rem;
     width: 100%;
+    .line {
+      width: 64px;
+      height: 4px;
+      background-color: #9ce861;
+      position: absolute;
+      z-index: 1;
+      bottom: -4px;
+    }
   }
   hr {
     width: 100%;

@@ -25,7 +25,7 @@ export default function Home() {
   }, []);
   useEffect(() => {
     setWidth768((width768) => document.documentElement.clientWidth);
-    width768 > 768 ? animation() : null;
+    width768 > 400 ? animation() : null;
   }, [width768]);
 
   return (

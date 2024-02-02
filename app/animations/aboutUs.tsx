@@ -10,6 +10,7 @@ export default function animation() {
   animat();
 
   tl.from(".about", {
+    yPercent: -100,
     opacity: 0,
     duration: 1,
   })

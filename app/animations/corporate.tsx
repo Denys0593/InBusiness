@@ -11,6 +11,7 @@ export default function animation() {
   animat();
 
   tl.from(".corporateStructuring", {
+    yPercent: -100,
     opacity: 0,
     duration: 1,
   })

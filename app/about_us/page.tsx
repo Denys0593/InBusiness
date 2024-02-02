@@ -12,6 +12,7 @@ import { Metadata } from "next";
 
 export default function AboutUs() {
   const [width768, setWidth768] = useState<number>(0);
+  const [arrowDown, setArrowDown] = useState(true);
 
   useEffect(() => {
     setWidth768((width768) => document.documentElement.clientWidth);
@@ -185,6 +186,15 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
+        <div
+          onClick={() => setArrowDown((arrowDown) => !arrowDown)}
+          className="values__values375"
+        >
+          <span>Show more</span>
+          <div className={arrowDown ? "values__img" : "values__img2"}>
+            <img src="arrowRight.svg" alt="arrowRight" />
+          </div>
+        </div>
       </section>
 
       <div className="beforeFooter">
@@ -203,6 +213,7 @@ export default function AboutUs() {
             Contact Us
           </Link>
         </div>
+        <hr />
       </div>
 
       <Footer logo={"topBlack.png"} />

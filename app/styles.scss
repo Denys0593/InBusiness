@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  display: none;
+  display: flex;
   &__hello {
     position: absolute;
     top: 50%;
@@ -129,6 +129,7 @@
       right: 58px;
     }
     &:hover {
+      border-radius: 8px;
       background: #52a500;
       color: #fff;
       border: 1px solid #52a500;

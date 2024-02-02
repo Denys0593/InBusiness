@@ -25,9 +25,9 @@
     }
   }
   .beforeFooter {
-    &__background {
-      padding: 153px 247px;
-    }
+    // &__background {
+    //   padding: 153px 247px;
+    // }
     &__bottom {
       padding: 100px 237px 99px 149px;
     }
@@ -102,20 +102,22 @@
     }
   }
   .beforeFooter {
-    min-height: 550px;
-    &__background {
-      padding: 95px 131px;
-      font-size: 38px;
-    }
+    height: unset;
     &__bottom {
-      padding: 60px 180px 80px 120px;
+      padding: 0;
+      align-items: center;
+      height: 11rem;
+      justify-content: space-around;
+    }
+    hr {
+      height: 11rem;
+      left: 63.5%;
     }
     &__left {
-      width: auto;
-      font-size: 28px;
+      width: 40rem;
     }
     &__right {
-      font-size: 28px;
+      width: 12rem;
       &:before {
         content: none;
       }
@@ -192,14 +194,19 @@
     min-height: 150px;
     &__background {
       padding: 45px 60px;
-      font-size: 26px;
+      font-size: 32px;
+      height: unset;
     }
-    &__bottom {
-      padding: 40px 120px 40px 80px;
-    }
-    &__left,
-    &__right {
+    &__left {
+      width: 28rem;
       font-size: 22px;
+    }
+    &__right {
+      width: 8rem;
+      font-size: 22px;
+    }
+    hr {
+      display: none;
     }
   }
 }
@@ -280,7 +287,7 @@
     }
   }
   .values {
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 20px 20px;
     &__title {
       font-size: 45px;
     }
@@ -304,11 +311,16 @@
       font-size: 20px;
     }
     &__bottom {
-      padding: 40px 100px 40px 60px;
+      padding: 40px 40px 40px 0;
       align-items: center;
+      height: unset;
     }
-    &__left,
+    &__left {
+      width: unset;
+      font-size: 20px;
+    }
     &__right {
+      width: unset;
       font-size: 20px;
     }
   }
@@ -417,6 +429,34 @@
       width: 100%;
       margin-top: 1rem;
     }
+    &__values375 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      cursor: pointer;
+      span {
+        color: #080708;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+      }
+    }
+    &__img {
+      width: 2rem;
+      height: 2rem;
+      background: #9ce861;
+      border-radius: 100%;
+      rotate: 90deg;
+    }
+    &__img2 {
+      width: 2rem;
+      height: 2rem;
+      background: #9ce861;
+      border-radius: 100%;
+      rotate: -90deg;
+    }
   }
   .beforeFooter {
     &__background {
@@ -438,6 +478,7 @@
       padding: 2.5rem;
       width: 100%;
       font-size: 1.5rem;
+      text-align: center;
     }
   }
 }

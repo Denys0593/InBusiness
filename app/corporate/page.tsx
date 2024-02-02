@@ -168,11 +168,11 @@ export default function Corporate() {
         </button>
       </section>
 
-      <div className="beforeFooter">
-        <div className="beforeFooter__left">
+      <div className="beforeFooterCorp">
+        <div className="beforeFooterCorp__left">
           Next:&nbsp; <span>Corporate Secretarial Services</span>
         </div>
-        <button className="beforeFooter__right">
+        <button className="beforeFooterCorp__right">
           <img src="right.svg" alt="right" />
         </button>
       </div>
